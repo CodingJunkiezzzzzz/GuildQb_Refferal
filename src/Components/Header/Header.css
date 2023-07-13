@@ -1,0 +1,44 @@
+.NavUpperMain {
+  border-radius: 0px 0px 33px 33px;
+}
+
+.firstNavLink {
+  margin-left: 40px;
+}
+
+.MainLink {
+  color: white;
+}
+
+.walletConnect {
+  color: white;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: 2px solid red;
+  border-radius: 30px;
+  width: 170px;
+  height: 48px;
+}
+.wallet{
+    font-size: 20px;
+}
+
+.selt_main{
+    background-color: black;
+    color: white;
+    border-radius: 30px;
+    height: 48px;
+  border: 2px solid red;
+
+}
+.selt_main:focus{
+    border-color: none !important;
+    box-shadow: none !important;
+}
+
+
