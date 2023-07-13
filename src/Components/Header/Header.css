@@ -1,5 +1,6 @@
 .NavUpperMain {
   border-radius: 0px 0px 33px 33px;
+  background-color: #1E0A49;
 }
 
 .firstNavLink {
@@ -29,7 +30,7 @@
 }
 
 .selt_main{
-    background-color: black;
+    background-color: transparent;
     color: white;
     border-radius: 30px;
     height: 48px;
@@ -39,6 +40,14 @@
 .selt_main:focus{
     border-color: none !important;
     box-shadow: none !important;
+}
+.optionsLnk{
+    background-color: #1E0A49;
+    color: white;
+}
+
+.form-select {
+    background-image: url(../Assets/white-down.jpg) !important;
 }
 
 

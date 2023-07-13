@@ -10,7 +10,7 @@ function Header() {
   return (
     <div className="">
       <>
-        <Navbar collapseOnSelect expand="lg" className="bg-black NavUpperMain">
+        <Navbar collapseOnSelect expand="lg" className="NavUpperMain">
           <Container className="">
             <Navbar.Brand className="text-white" href="#home">React</Navbar.Brand>
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
@@ -29,8 +29,8 @@ function Header() {
               <Nav className="align-items-center">
                 <Nav.Link href="#deets">
                   <Form.Select aria-label="Default select example" className="selt_main">
-                    <option>English</option>
-                    <option value="1">Japanese</option>
+                    <option className="optionsLnk">English</option>
+                    <option className="optionsLnk" value="1">Japanese</option>
                   </Form.Select>
                 </Nav.Link>
                 <Nav.Link className="walletConnect" href="#"><FaWallet className="wallet"/>Connect wallet</Nav.Link>
