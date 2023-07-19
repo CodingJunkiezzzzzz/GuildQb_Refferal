@@ -1,0 +1,128 @@
+.tablebg{
+    background-color: #5c5a61;
+
+}
+.tableborder{
+    border: 1px solid;
+    border-image: linear-gradient(119deg, #8217F4 19.01%, #00D1FF 100%) 1;
+/* border: 2px solid forestgreen; */
+/* background: var(--gradient-1, linear-gradient(119deg, #8217F4 19.01%, #00D1FF 100%)); */
+
+
+}
+
+.brids{
+    /* border-radius: 10px 0px 0px 0px; */
+
+
+    border-radius: 40px 0px 0px 0px;
+background: var(--light-gradient, linear-gradient(135deg, #D8E8FF 0%, #EDFCFF 68.23%, #FFF 100%));
+}
+
+.brids1{
+
+    border-radius: 0px 40px 0px 0px;
+background: var(--light-gradient, linear-gradient(135deg, #D8E8FF 0%, #EDFCFF 68.23%, #FFF 100%));
+}
+
+.brids2{
+    
+    
+    border-radius: 0px 0px 0px 40px;
+}
+
+.brids3{
+    
+    border-radius: 0px 0px 40px 0px;
+
+}
+
+
+.tpbg{
+    background-color: #EBFAFF;
+}
+
+.tableh1{
+    color: var(--dark-bg, #130732);
+/* H5 */
+font-family: Murecho;
+font-size: 22px;
+font-style: normal;
+font-weight: 600;
+line-height: 116%; /* 25.52px */
+letter-spacing: 0.44px;
+}
+
+.tableP{
+    color: var(--white, #FFF);
+    background-color: #130737;
+/* H5 */
+font-family: Murecho;
+font-size: 22px;
+font-style: normal;
+font-weight: 600;
+line-height: 116%; /* 25.52px */
+letter-spacing: 0.44px;
+}
+
+
+
+
+
+
+
+.test {
+    background: transparent;
+    padding: 0.5rem 1rem;
+    background-image: linear-gradient(90deg, white, white),
+      linear-gradient(90deg, hsl(289, 65%, 64%), hsl(226, 78%, 67%));
+    background-clip: padding-box, border-box;
+    background-origin: border-box;
+    border: 1px solid transparent;
+    border-radius: 40px 0px 0px 0px;
+  }
+
+  .test1 {
+    background: transparent;
+    padding: 0.5rem 1rem;
+    background-image: linear-gradient(90deg, white, white),
+      linear-gradient(90deg, hsl(289, 65%, 64%), hsl(226, 78%, 67%));
+    background-clip: padding-box, border-box;
+    background-origin: border-box;
+    border: 1px solid transparent;
+    border-radius: 0px 40px 0px 0px;
+  }
+
+  .test2{
+    padding: 0.5rem 1rem;
+    background-image: linear-gradient(90deg, #130737, #130737),
+      linear-gradient(90deg, hsl(289, 65%, 64%), hsl(226, 78%, 67%));
+    background-clip: padding-box, border-box;
+    background-origin: border-box;
+    border: 1px solid transparent;
+    border-radius: 0px 0px 0px 40px;
+  }
+
+  .test3{
+    padding: 0.5rem 1rem;
+    background-image: linear-gradient(90deg, #130737, #130737),
+      linear-gradient(90deg, hsl(289, 65%, 64%), hsl(226, 78%, 67%));
+    background-clip: padding-box, border-box;
+    background-origin: border-box;
+    border: 1px solid transparent;
+    border-radius: 0px 0px 40px 0px;
+  }
+ 
+  /* .button__label {
+    background-image: linear-gradient(
+      90deg,
+      hsl(289, 65%, 64%),
+      hsl(226, 78%, 67%)
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    font-weight: 600;
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+  } */
