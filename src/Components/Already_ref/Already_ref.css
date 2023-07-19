@@ -1,0 +1,45 @@
+.alredy_ref_main{
+    padding: 20px 10px ;
+    background-color: #130732;
+}
+
+.box_ref h1{
+    font-size: 48px;
+font-style: normal;
+font-weight: 800;
+line-height: 116%; /* 55.68px */
+letter-spacing: 0.96px;
+text-align: center;
+font-family: 'Murecho', sans-serif;
+
+
+color: white !important;
+}
+
+.box_ref{
+    border-radius: 39px;
+background: var(--dark-bg, #130732);
+border: 2px solid white;
+height: 449px;
+display: flex;
+justify-content: center;
+align-items: center;
+position: relative;
+}
+
+
+.lin{
+    position: absolute;
+    left: 0px ;
+    top: 1px;
+
+}
+
+.circlu{
+    position: absolute;
+    border-radius: 689.503px;
+background: rgba(49, 0, 255, 0.13);
+filter: blur(120px);
+width: 689.503px;
+height: 519px;
+}
