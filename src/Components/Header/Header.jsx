@@ -5,6 +5,8 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import Form from "react-bootstrap/Form";
 import { FaWallet } from "react-icons/fa";
+import qb_logo from "../Assets/Logo.png"
+import qb_mobl_logo from '../Assets/mobile_logo.png'
 
 function Header() {
   return (
@@ -12,8 +14,16 @@ function Header() {
       <>
         <Navbar collapseOnSelect expand="lg" className="NavUpperMain">
           <Container className="">
-            <Navbar.Brand className="text-white" href="#home">React</Navbar.Brand>
-            <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+            <Navbar.Brand className="text-white" href="#home">
+              <div>
+                <img src={qb_logo} alt="#" className="qbmain" />
+                <img src={qb_mobl_logo} alt="#" className="qbMobil" />
+              </div>
+            </Navbar.Brand>
+            <div className="d-flex gap-3">
+            <Nav.Link className="walletConnect2" href="#"><FaWallet className="wallet"/>Connect</Nav.Link>
+            <Navbar.Toggle aria-controls="responsive-navbar-nav" className="humberger" />
+            </div>
             <Navbar.Collapse id="responsive-navbar-nav">
               <Nav className="me-auto firstNavLink">
                 
@@ -26,8 +36,8 @@ function Header() {
                 
               </Nav>
 
-              <Nav className="align-items-center">
-                <Nav.Link href="#deets">
+              <Nav className="d-flex align-items-center">
+                <Nav.Link href="#deets" className="sltUpper">
                   <Form.Select aria-label="Default select example" className="selt_main">
                     <option className="optionsLnk">English</option>
                     <option className="optionsLnk" value="1">Japanese</option>
