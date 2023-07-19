@@ -1,3 +1,9 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Murecho&display=swap');
+
+
+
+
 .NavUpperMain {
   border-radius: 0px 0px 33px 33px;
   background-color: #1E0A49;
@@ -9,6 +15,7 @@
 
 .MainLink {
   color: white;
+  font-family: 'Murecho', sans-serif;
 }
 
 .walletConnect {
