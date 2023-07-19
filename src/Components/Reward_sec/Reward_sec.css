@@ -1,0 +1,148 @@
+.rwd_back {
+  background-image: url(../Assets/reward_bg.png);
+  /* background-position: center; */
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.main_titleLayer {
+  font-family: "Murecho", sans-serif;
+  color: #fff !important ;
+  font-size: 54px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 116.5%; /* 67.57px */
+  letter-spacing: 1.16px;
+  margin-bottom: 0px;
+  text-align: start;
+  margin-top: 40px;
+}
+
+.subtitle {
+  color: #fff;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 24px */
+  letter-spacing: 0.16px;
+  text-align: start;
+  margin-top: 20px;
+  margin-bottom: 25px;
+  font-family: "Murecho", sans-serif;
+}
+
+.title_upper {
+  margin-top: 60px;
+  margin-bottom: 60px;
+  display: flex;
+  justify-content: end;
+}
+
+.reward_but {
+  color: white !important;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%;
+  letter-spacing: 0.14px;
+  text-transform: uppercase;
+  border-radius: 32px;
+  background: var(
+    --gradient-1,
+    linear-gradient(119deg, #8217f4 19.01%, #00d1ff 100%)
+  );
+  height: 47px;
+  width: 35%;
+  border: none;
+  font-family: "Murecho", sans-serif;
+}
+
+.walletReward {
+  font-size: 20px;
+}
+
+/* -------------------------exclusive style -------------------- */
+
+.exclusivemainUpper {
+  margin-top: 70px;
+}
+
+.exclusive_titleupper {
+  padding: 35px 0px;
+}
+
+.exclusive_title {
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 116%; /* 55.68px */
+  letter-spacing: 0.96px;
+  color: #fff;
+  font-family: "Murecho", sans-serif;
+}
+
+.exclu_subtitle {
+  font-family: "Murecho", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 24px */
+  letter-spacing: 0.16px;
+  color: #fff;
+  margin-top: 20px;
+}
+
+@media only screen and (max-width:600px) {
+  .rwd_back {
+    background-image: url(../Assets/reward_bgMobile.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .title_upper {
+    margin-top: 12px;
+    margin-bottom: 60px;
+    padding: 0px 20px;
+    display: flex;
+    justify-content: center !important;
+  }
+
+  .rk {
+    display: none;
+  }
+
+  .main_titleLayer {
+    font-size: 48px;
+    font-weight: 800;
+    margin-bottom: 0px;
+    margin-top: 40px;
+    text-align: start;
+  }
+
+  .reward_but {
+    width: 100%;
+  }
+}
+
+@media (min-width:600px) and (max-width:768px){
+    .rk {
+        /* display: none; */
+      }
+
+    .rwd_back {
+        background-image: url(../Assets/reward_bg.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+
+     .title_upper {
+    margin-top: 12px;
+    margin-bottom: 60px;
+    padding: 0px 20px;
+    display: flex;
+    justify-content: center !important;
+  }
+
+}
