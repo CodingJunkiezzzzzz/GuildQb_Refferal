@@ -1,0 +1,32 @@
+.bgFooter{
+
+    background-color: #130732 !important;
+
+}
+.foterBoder{
+
+      border: 2px solid ;
+      
+        /* border-image: linear-gradient((119deg, #8217f4 19.01%, #00d1ff 100%)) !important; */
+        
+
+        border-radius: 71px !important;
+        
+            height: 76px !important;
+      
+
+    color: #FFF;
+    
+display: flex !important;
+align-items: center;
+justify-content: center;
+
+font-family: Ubuntu;
+font-size: 13px;
+font-style: normal;
+font-weight: 400;
+line-height: 150%;
+text-transform: uppercase;
+backdrop-filter: blur(10px);
+}
+
