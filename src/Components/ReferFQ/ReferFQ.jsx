@@ -7,129 +7,142 @@ function ReferFQ() {
     <div className='bgFQ maindiv'>
     <div className="container">
 
-      <div className="row">
-      <div className="col-8 d-block m-auto my-5">
+    <div className="row justify-content-center pt-5">
+        <div className="col-md-8">
 
-      <Accordion defaultActiveKey="0">
-      <Accordion.Item eventKey="0" className='aaa forcolor'>
-        <Accordion.Header className='fqhhhhh'> <span className='text-white'> What is "Refer a friend"? </span></Accordion.Header>
-        <Accordion.Body >
-        <span className='fqppppp'>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.</span>
+    <Accordion defaultActiveKey="1">
+      <Accordion.Item className='item_bor' eventKey="0">
+        <Accordion.Header><span className='text-white faq_heading'>What will I get if I refer to my friends using GuildQB?</span></Accordion.Header>
+        <Accordion.Body>
+         <p className='text-white acc_text'>
+         Please kindly see the "EXCLUSIVE REWARDS" column for more details of the rewards in different scenarios. The rewards and the criteria may be updated throughout the development of GuildQB. Stay tuned.
+         {/* This mechanism was created to reward our users and grow the GuildQB community. You can invite friends to use GuildQB together with you. Rewards will be offered to you as a thank-you present from us. More invites come with more rewards! We welcome you to help share the product with your network.  */}
+          </p>
         </Accordion.Body>
       </Accordion.Item>
+      </Accordion>
+        </div>
+    </div>
+
+    <div className="row justify-content-center mt-3">
+        <div className="col-md-8">
+
+    <Accordion defaultActiveKey="1">
+      <Accordion.Item className='item_bor' eventKey="0">
+        <Accordion.Header><span className='text-white faq_heading'>What will I get if I refer to my friends using GuildQB?</span></Accordion.Header>
+        <Accordion.Body>
+         <p className='text-white acc_text'>
+         Please kindly see the "EXCLUSIVE REWARDS" column for more details of the rewards in different scenarios. The rewards and the criteria may be updated throughout the development of GuildQB. Stay tuned.
+         {/* This mechanism was created to reward our users and grow the GuildQB community. You can invite friends to use GuildQB together with you. Rewards will be offered to you as a thank-you present from us. More invites come with more rewards! We welcome you to help share the product with your network.  */}
+          </p>
+        </Accordion.Body>
+      </Accordion.Item>
+      </Accordion>
+        </div>
+    </div>
 
     
-      
+    <div className="row justify-content-center mt-3">
+        <div className="col-md-8">
 
-      
+    <Accordion defaultActiveKey="1">
+      <Accordion.Item className='item_bor' eventKey="0">
+        <Accordion.Header><span className='text-white faq_heading'>What will I get if I refer to my friends using GuildQB?</span></Accordion.Header>
+        <Accordion.Body>
+         <p className='text-white acc_text'>
+         Please kindly see the "EXCLUSIVE REWARDS" column for more details of the rewards in different scenarios. The rewards and the criteria may be updated throughout the development of GuildQB. Stay tuned.
+         {/* This mechanism was created to reward our users and grow the GuildQB community. You can invite friends to use GuildQB together with you. Rewards will be offered to you as a thank-you present from us. More invites come with more rewards! We welcome you to help share the product with your network.  */}
+          </p>
+        </Accordion.Body>
+      </Accordion.Item>
+      </Accordion>
+        </div>
+    </div>
+    
+    <div className="row justify-content-center mt-3">
+        <div className="col-md-8">
 
-      
-      {/* <Accordion.Item eventKey="1" className='mt-3'>
-        <Accordion.Header></Accordion.Header>
+    <Accordion defaultActiveKey="1">
+      <Accordion.Item className='item_bor' eventKey="0">
+        <Accordion.Header><span className='text-white faq_heading'>What will I get if I refer to my friends using GuildQB?</span></Accordion.Header>
         <Accordion.Body>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.
+         <p className='text-white acc_text'>
+         Please kindly see the "EXCLUSIVE REWARDS" column for more details of the rewards in different scenarios. The rewards and the criteria may be updated throughout the development of GuildQB. Stay tuned.
+         {/* This mechanism was created to reward our users and grow the GuildQB community. You can invite friends to use GuildQB together with you. Rewards will be offered to you as a thank-you present from us. More invites come with more rewards! We welcome you to help share the product with your network.  */}
+          </p>
         </Accordion.Body>
       </Accordion.Item>
-      <Accordion.Item eventKey="2" className='mt-3'>
-        <Accordion.Header></Accordion.Header>
-        <Accordion.Body>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.
-        </Accordion.Body>
-      </Accordion.Item>
-      <Accordion.Item eventKey="3" className='mt-3'>
-        <Accordion.Header></Accordion.Header>
-        <Accordion.Body>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.
-        </Accordion.Body>
-      </Accordion.Item>
-      <Accordion.Item eventKey="4" className='mt-3'>
-        <Accordion.Header>How many friends can I invite?</Accordion.Header>
-        <Accordion.Body>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.
-        </Accordion.Body>
-      </Accordion.Item>
-      <Accordion.Item eventKey="5" className='mt-3'>
-        <Accordion.Header>Can I change the wallet address of my referral?</Accordion.Header>
-        <Accordion.Body>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.
-        </Accordion.Body>
-      </Accordion.Item>
-      <Accordion.Item eventKey="6" className='mt-3'>
-        <Accordion.Header>Can I delete my account?</Accordion.Header>
-        <Accordion.Body>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.
-        </Accordion.Body>
-      </Accordion.Item>
-      <Accordion.Item eventKey="7" className='mt-3'>
-        <Accordion.Header>Why aren't my referral points being counted by the system?</Accordion.Header>
-        <Accordion.Body>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.
-        </Accordion.Body>
-      </Accordion.Item>
-      <Accordion.Item eventKey="8" className='mt-3'>
-        <Accordion.Header>Are there any qualification restrictions and rules for the program?</Accordion.Header>
-        <Accordion.Body>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.
-        </Accordion.Body>
-      </Accordion.Item> */}
-    </Accordion>
+      </Accordion>
+        </div>
+    </div>
+    
+    <div className="row justify-content-center mt-3">
+        <div className="col-md-8">
 
-      </div></div>
+    <Accordion defaultActiveKey="1">
+      <Accordion.Item className='item_bor' eventKey="0">
+        <Accordion.Header><span className='text-white faq_heading'>What will I get if I refer to my friends using GuildQB?</span></Accordion.Header>
+        <Accordion.Body>
+         <p className='text-white acc_text'>
+         Please kindly see the "EXCLUSIVE REWARDS" column for more details of the rewards in different scenarios. The rewards and the criteria may be updated throughout the development of GuildQB. Stay tuned.
+         {/* This mechanism was created to reward our users and grow the GuildQB community. You can invite friends to use GuildQB together with you. Rewards will be offered to you as a thank-you present from us. More invites come with more rewards! We welcome you to help share the product with your network.  */}
+          </p>
+        </Accordion.Body>
+      </Accordion.Item>
+      </Accordion>
+        </div>
+    </div>
+    
+    <div className="row justify-content-center mt-3">
+        <div className="col-md-8">
+
+    <Accordion defaultActiveKey="1">
+      <Accordion.Item className='item_bor' eventKey="0">
+        <Accordion.Header><span className='text-white faq_heading'>What will I get if I refer to my friends using GuildQB?</span></Accordion.Header>
+        <Accordion.Body>
+         <p className='text-white acc_text'>
+         Please kindly see the "EXCLUSIVE REWARDS" column for more details of the rewards in different scenarios. The rewards and the criteria may be updated throughout the development of GuildQB. Stay tuned.
+         {/* This mechanism was created to reward our users and grow the GuildQB community. You can invite friends to use GuildQB together with you. Rewards will be offered to you as a thank-you present from us. More invites come with more rewards! We welcome you to help share the product with your network.  */}
+          </p>
+        </Accordion.Body>
+      </Accordion.Item>
+      </Accordion>
+        </div>
+    </div>
+    
+    <div className="row justify-content-center mt-3">
+        <div className="col-md-8">
+
+    <Accordion defaultActiveKey="1">
+      <Accordion.Item className='item_bor' eventKey="0">
+        <Accordion.Header><span className='text-white faq_heading'>What will I get if I refer to my friends using GuildQB?</span></Accordion.Header>
+        <Accordion.Body>
+         <p className='text-white acc_text'>
+         Please kindly see the "EXCLUSIVE REWARDS" column for more details of the rewards in different scenarios. The rewards and the criteria may be updated throughout the development of GuildQB. Stay tuned.
+         {/* This mechanism was created to reward our users and grow the GuildQB community. You can invite friends to use GuildQB together with you. Rewards will be offered to you as a thank-you present from us. More invites come with more rewards! We welcome you to help share the product with your network.  */}
+          </p>
+        </Accordion.Body>
+      </Accordion.Item>
+      </Accordion>
+        </div>
+    </div>
+    
+    <div className="row justify-content-center mt-3 pb-5">
+        <div className="col-md-8">
+
+    <Accordion defaultActiveKey="1">
+      <Accordion.Item className='item_bor' eventKey="0">
+        <Accordion.Header><span className='text-white faq_heading'>What will I get if I refer to my friends using GuildQB?</span></Accordion.Header>
+        <Accordion.Body>
+         <p className='text-white acc_text'>
+         Please kindly see the "EXCLUSIVE REWARDS" column for more details of the rewards in different scenarios. The rewards and the criteria may be updated throughout the development of GuildQB. Stay tuned.
+         {/* This mechanism was created to reward our users and grow the GuildQB community. You can invite friends to use GuildQB together with you. Rewards will be offered to you as a thank-you present from us. More invites come with more rewards! We welcome you to help share the product with your network.  */}
+          </p>
+        </Accordion.Body>
+      </Accordion.Item>
+      </Accordion>
+        </div>
+    </div>
     </div>
    
     </div>

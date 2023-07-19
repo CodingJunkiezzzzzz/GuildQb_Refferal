@@ -7,8 +7,8 @@ function Footer() {
     <div className='bgFooter'>
     
 <div className="container">
-    <div className="row">
-        <div className="col foterBoder my-5 ">
+    <div className="row p-3">
+        <div className="col foterBoder my-2 ">
 
 
     © Copyright 2023 GuildQB. All rights reserved
