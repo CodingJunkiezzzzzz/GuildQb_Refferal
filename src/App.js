@@ -14,16 +14,16 @@ import Already_ref from './Components/Already_ref/Already_ref';
 function App() {
   return (
     <div className="App">
-      {/* <Header/> */}
+      <Header/>
 
 
-      {/* <Reward_sec/> */}
-      {/* <How_it_work/> */}
-      {/* <How_it_work_two/> */}
-      {/* <FAQ/> */}
+      <Reward_sec/>
       <Tablle/>
+      <How_it_work/>
+      <How_it_work_two/>
       <Already_ref />
       <ReferFQ/>
+      <FAQ/>
       <Footer />
     </div>
   );
