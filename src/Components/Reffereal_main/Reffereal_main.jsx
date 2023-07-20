@@ -10,22 +10,22 @@ export default function Reffereal_main() {
   const [modalShow, setModalShow] = React.useState(false);
   return (
     <div className="Refferal_main_page ">
-    
       <div className="container-fluid fourth_k ">
-      <nav aria-label="breadcrumb">
-        <ol class="breadcrumb">
-          <li class="breadcrumb-item">
-            <a className="quest_ref text-decoration-none    " href="#">
-              Home
-            </a>
-          </li>
-          <li class="breadcrumb-item  " aria-current="page">
-            <a className="quest_ref text-decoration-none ref_ref  " href="#">
-              Referral
-            </a>
-          </li>
-        </ol>
-      </nav>
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+              <a className="quest_ref text-decoration-none    " href="#">
+                Home
+              </a>
+            </li>
+            <li class="breadcrumb-item  " aria-current="page">
+              <a className="quest_ref text-decoration-none ref_ref  " href="#">
+                Referral
+              </a>
+            </li>
+          </ol>
+        </nav>
+        {/* main refferal part  */}
         <div className="row">
           <div className="col-lg-5  px-0">
             <div className="ref_left_content text-start">
@@ -36,7 +36,7 @@ export default function Reffereal_main() {
           </div>
           <div className="col-lg-7 px-0">
             <div className="ref_right_cont text-start">
-            <div className="fsfsww2"></div>
+              <div className="fsfsww2"></div>
               <p>Your referral link</p>
               <div className="d-flex ref_copy_main">
                 <input
@@ -56,9 +56,9 @@ export default function Reffereal_main() {
                   <img src={copy} alt="" />
                 </button>
                 <Refferal_modal
-        show={modalShow}
-        onHide={() => setModalShow(false)}
-      />
+                  show={modalShow}
+                  onHide={() => setModalShow(false)}
+                />
               </div>
               <p className="para_ref">
                 You've received your referral link, and sharing it with your
@@ -74,6 +74,8 @@ export default function Reffereal_main() {
             </div>
           </div>
         </div>
+
+        {/* 3 boxes of total reward and select reaward  */}
         <div className="row adjust_ment mt-4 mt-lg-0">
           <div className="col-md-4 col-6 ps-0">
             <div className="refer_content text-start">
@@ -96,12 +98,14 @@ export default function Reffereal_main() {
           </div>
         </div>
 
+
+        {/* last table with white header  */}
+
         <div className="row table_tay ">
           <div className="col-md-6 px-0">
             <div className="last_left">
               <div className="colsejf rewd_color">
                 <p className="referds">Accounts You’ve Referred</p>
-                {/* <className=' '>Accounts You’ve Referred</className=> */}
               </div>
               <div className="loer rewd_colorr">
                 <p className="rewddd_p">
@@ -114,7 +118,7 @@ export default function Reffereal_main() {
 
           <div className="col-md-6 px-0">
             <div className="last_left">
-            <div className="fsfsww3"></div>
+              <div className="fsfsww3"></div>
 
               <div className="colsejff rewd_color">
                 <p className="referds">Rewards you’ve received</p>
@@ -125,9 +129,6 @@ export default function Reffereal_main() {
                   rewards.
                 </p>
               </div>
-
-
-             
             </div>
           </div>
         </div>

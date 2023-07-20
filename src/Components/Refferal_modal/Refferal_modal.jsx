@@ -9,6 +9,9 @@ import {AiOutlineClose} from "react-icons/ai"
 
 export default function Refferal_modal(props) {
   return (
+
+
+    // this is the modal component which opens when we click on refferal link 
     <div className='main_refferal_modal'>
        <Modal
       {...props}
@@ -20,6 +23,9 @@ export default function Refferal_modal(props) {
     >
     
       <AiOutlineClose className='close_btn d-none d-lg-block' onClick={props.onHide}></AiOutlineClose>
+   
+   {/* modal content is here  */}
+   
       <Modal.Body>
         <h4 className='modal_ref'>Your referral link</h4>
         <div className="d-flex modal_input_here ref_copy_main">
