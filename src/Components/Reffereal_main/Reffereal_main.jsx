@@ -1,0 +1,123 @@
+import React from "react";
+import "./Reffereal_main.css";
+import copy from "../Assets/copy_icon.svg";
+import twiter from "../Assets/soic_twi.svg";
+import fb from "../Assets/fb.svg";
+import award from "../Assets/award.svg";
+
+export default function Reffereal_main() {
+  return (
+    <div className="Refferal_main_page">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item">
+            <a className="quest_ref text-decoration-none    " href="#">
+              Home
+            </a>
+          </li>
+          <li class="breadcrumb-item  " aria-current="page">
+            <a className="quest_ref text-decoration-none ref_ref  " href="#">
+              Referral
+            </a>
+          </li>
+        </ol>
+      </nav>
+      <div className="container-fluid">
+        <div className="row">
+          <div className="col-lg-5  px-0">
+            <div className="ref_left_content text-start">
+              <h1>Referral</h1>
+              <p>Refer a friend and get rewards.</p>
+              <div className="cir_clr"></div>
+            </div>
+          </div>
+          <div className="col-lg-7 px-0">
+            <div className="ref_right_cont text-start">
+              <p>Your referral link</p>
+              <div className="d-flex ref_copy_main">
+                <input
+                  type="text"
+                  className="copy_inp text-truncate"
+                  placeholder="https://guildqb.com/invitation/46504932bcc5526955"
+                  name=""
+                  id=""
+                />
+                <button className="ref_copy d-none d-md-flex">
+                  {" "}
+                  <img src={copy} alt="" /> <p className="copy_text">copy</p>
+                </button>
+                <button className="ref_copy  d-flex d-md-none">
+                  {" "}
+                  <img src={copy} alt="" />
+                </button>
+              </div>
+              <p className="para_ref">
+                You've received your referral link, and sharing it with your
+                friends can earn you reward points. Thanks to your support!
+              </p>
+              <div className="d-flex px-0 text-start flex-column flex-md-row gap-3 newed  mt-3">
+                <p className="mb-0 ">Share referral link with your network:</p>
+                <div>
+                  <img src={twiter} alt="" />
+                  <img src={fb} alt="" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="row adjust_ment mt-4 mt-lg-0">
+          <div className="col-md-4 col-6 ps-0">
+            <div className="refer_content text-start">
+              <p>Total referral numbers</p>
+              <h1>0</h1>
+            </div>
+          </div>
+          <div className="col-md-4 col-6">
+            <div className="refer_content text-start">
+              <p>Left Points</p>
+              <h1>0</h1>
+            </div>
+          </div>
+          <div className="col-md-4 px-0 px-md-1 col-12 mt-3 mt-md-0">
+            <div className="color_ref text-center">
+              {/* <p >Left Points</p> */}
+              <img src={award} alt="" />
+              <p>Select Reward</p>
+            </div>
+          </div>
+        </div>
+
+        <div className="row table_tay ">
+          <div className="col-md-6 px-0">
+            <div className="last_left">
+              <div className="colsejf rewd_color">
+                <p className="referds">Accounts You’ve Referred</p>
+                {/* <className=' '>Accounts You’ve Referred</className=> */}
+              </div>
+              <div className="loer rewd_colorr">
+                <p className="rewddd_p">
+                  No successful referrals yet. Refer GuildQB to your friends
+                  now.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div className="col-md-6 px-0">
+            <div className="last_left">
+              <div className="colsejff rewd_color">
+                <p className="referds">Rewards you’ve received</p>
+              </div>
+              <div className="loerr rewd_colorr">
+                <p className="rewddd_p">
+                  No rewards claim yet. Refer GuildQB to your friends and get
+                  rewards.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
