@@ -4,10 +4,14 @@ import copy from "../Assets/copy_icon.svg";
 import twiter from "../Assets/soic_twi.svg";
 import fb from "../Assets/fb.svg";
 import award from "../Assets/award.svg";
+import Refferal_modal from "../Refferal_modal/Refferal_modal";
 
 export default function Reffereal_main() {
+  const [modalShow, setModalShow] = React.useState(false);
   return (
-    <div className="Refferal_main_page">
+    <div className="Refferal_main_page ">
+    
+      <div className="container-fluid fourth_k ">
       <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
           <li class="breadcrumb-item">
@@ -22,7 +26,6 @@ export default function Reffereal_main() {
           </li>
         </ol>
       </nav>
-      <div className="container-fluid">
         <div className="row">
           <div className="col-lg-5  px-0">
             <div className="ref_left_content text-start">
@@ -33,14 +36,16 @@ export default function Reffereal_main() {
           </div>
           <div className="col-lg-7 px-0">
             <div className="ref_right_cont text-start">
+            <div className="fsfsww2"></div>
               <p>Your referral link</p>
               <div className="d-flex ref_copy_main">
                 <input
                   type="text"
-                  className="copy_inp text-truncate"
+                  className="copy_inp text-truncate "
                   placeholder="https://guildqb.com/invitation/46504932bcc5526955"
                   name=""
                   id=""
+                  onClick={() => setModalShow(true)}
                 />
                 <button className="ref_copy d-none d-md-flex">
                   {" "}
@@ -50,6 +55,10 @@ export default function Reffereal_main() {
                   {" "}
                   <img src={copy} alt="" />
                 </button>
+                <Refferal_modal
+        show={modalShow}
+        onHide={() => setModalShow(false)}
+      />
               </div>
               <p className="para_ref">
                 You've received your referral link, and sharing it with your
@@ -105,15 +114,20 @@ export default function Reffereal_main() {
 
           <div className="col-md-6 px-0">
             <div className="last_left">
+            <div className="fsfsww3"></div>
+
               <div className="colsejff rewd_color">
                 <p className="referds">Rewards you’ve received</p>
               </div>
-              <div className="loerr rewd_colorr">
+              <div className="loerr rewd_colorr text-start">
                 <p className="rewddd_p">
                   No rewards claim yet. Refer GuildQB to your friends and get
                   rewards.
                 </p>
               </div>
+
+
+             
             </div>
           </div>
         </div>
