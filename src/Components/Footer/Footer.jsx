@@ -8,7 +8,7 @@ function Footer() {
     
 <div className="container">
     <div className="row p-3">
-        <div className="col foterBoder my-2 ">
+        <div className="col foterBoder my-2 foterganiyan">
 
 
     © Copyright 2023 GuildQB. All rights reserved

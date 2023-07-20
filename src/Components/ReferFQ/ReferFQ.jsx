@@ -4,13 +4,17 @@ import pick from "../Assets/angle.svg"
 
 function ReferFQ() {
   return (
-    <div className='bgFQ maindiv'>
+
+    <div className='maindiv bgFQ  '>
+
+    <div className=' '>
     <div className="container">
+    <h3 className='faqh2'>Refer Q&A</h3>
 
-    <div className="row justify-content-center pt-5">
-        <div className="col-md-8">
+    <div className="row justify-content-center">
+        <div className="col-lg-8 col-12">
 
-    <Accordion defaultActiveKey="1">
+    <Accordion defaultActiveKey="0">
       <Accordion.Item className='item_bor' eventKey="0">
         <Accordion.Header><span className='text-white faq_heading'>What will I get if I refer to my friends using GuildQB?</span></Accordion.Header>
         <Accordion.Body>
@@ -25,7 +29,7 @@ function ReferFQ() {
     </div>
 
     <div className="row justify-content-center mt-3">
-        <div className="col-md-8">
+        <div className="col-lg-8 col-12">
 
     <Accordion defaultActiveKey="1">
       <Accordion.Item className='item_bor' eventKey="0">
@@ -43,7 +47,7 @@ function ReferFQ() {
 
     
     <div className="row justify-content-center mt-3">
-        <div className="col-md-8">
+        <div className="col-lg-8 col-12">
 
     <Accordion defaultActiveKey="1">
       <Accordion.Item className='item_bor' eventKey="0">
@@ -60,7 +64,7 @@ function ReferFQ() {
     </div>
     
     <div className="row justify-content-center mt-3">
-        <div className="col-md-8">
+        <div className="col-lg-8 col-12">
 
     <Accordion defaultActiveKey="1">
       <Accordion.Item className='item_bor' eventKey="0">
@@ -77,7 +81,7 @@ function ReferFQ() {
     </div>
     
     <div className="row justify-content-center mt-3">
-        <div className="col-md-8">
+        <div className="col-lg-8 col-12">
 
     <Accordion defaultActiveKey="1">
       <Accordion.Item className='item_bor' eventKey="0">
@@ -94,7 +98,7 @@ function ReferFQ() {
     </div>
     
     <div className="row justify-content-center mt-3">
-        <div className="col-md-8">
+        <div className="col-lg-8 col-12">
 
     <Accordion defaultActiveKey="1">
       <Accordion.Item className='item_bor' eventKey="0">
@@ -111,7 +115,7 @@ function ReferFQ() {
     </div>
     
     <div className="row justify-content-center mt-3">
-        <div className="col-md-8">
+        <div className="col-lg-8 col-12">
 
     <Accordion defaultActiveKey="1">
       <Accordion.Item className='item_bor' eventKey="0">
@@ -128,7 +132,7 @@ function ReferFQ() {
     </div>
     
     <div className="row justify-content-center mt-3 pb-5">
-        <div className="col-md-8">
+        <div className="col-lg-8 col-12">
 
     <Accordion defaultActiveKey="1">
       <Accordion.Item className='item_bor' eventKey="0">
@@ -146,6 +150,8 @@ function ReferFQ() {
     </div>
    
     </div>
+      
+       </div>
   );
 }
 

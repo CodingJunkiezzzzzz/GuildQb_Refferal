@@ -9,18 +9,22 @@ import Reffereal_main from './Components/Reffereal_main/Reffereal_main';
 import Reward_sec from './Components/Reward_sec/Reward_sec';
 import Reward_slider from './Components/Reward_slider/Reward_slider';
 import Tablle from './Components/Tablle/Tablle';
+import Already_ref from './Components/Already_ref/Already_ref';
 
 function App() {
   return (
     <div className="App">
       {/* <Header/> */}
+
+
       {/* <Reward_sec/> */}
       {/* <How_it_work/> */}
       {/* <How_it_work_two/> */}
       {/* <FAQ/> */}
-      {/* <ReferFQ/> */}
-      {/* <Tablle/> */}
-      <Reffereal_main/>
+      <Tablle/>
+      <Already_ref />
+      <ReferFQ/>
+      <Footer />
     </div>
   );
 }

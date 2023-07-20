@@ -1,5 +1,5 @@
 .tablebg{
-    background-color: #5c5a61;
+    background-color: #130737;
 
 }
 .tableborder{
@@ -43,6 +43,9 @@ background: var(--light-gradient, linear-gradient(135deg, #D8E8FF 0%, #EDFCFF 68
 }
 
 .tableh1{
+  text-align: start !important;
+  /* padding-left: 10px; */
+
     color: var(--dark-bg, #130732);
 /* H5 */
 font-family: Murecho;
@@ -54,6 +57,7 @@ letter-spacing: 0.44px;
 }
 
 .tableP{
+  text-align: start !important;
     color: var(--white, #FFF);
     background-color: #130737;
 /* H5 */
@@ -126,3 +130,50 @@ letter-spacing: 0.44px;
     font-size: 1.25rem;
     line-height: 1.5rem;
   } */
+  
+
+  @media only screen and (max-width: 600px) {
+    .tableP{
+      color: var(--white, #FFF);
+font-family: Murecho;
+font-size: 18px;
+font-style: normal;
+font-weight: 600;
+line-height: 116%;
+letter-spacing: 0.36px;
+      
+    }
+    .test{
+      border-radius: 28px 0px 0px 0px !important;
+  }
+  .test1{
+    border-radius: 0px 28px 0px 0px !important;
+}
+.test2{
+  border-radius: 0px 0px 0px 28px !important;
+}
+.test3{
+  border-radius: 0px 0px 28px 0px !important;
+}
+  }
+
+
+
+  
+@media only screen and (max-width: 768px) {
+
+
+
+  .test{
+    border-radius: 28px 0px 0px 0px !important;
+}
+.test1{
+  border-radius: 0px 28px 0px 0px !important;
+}
+.test2{
+border-radius: 0px 0px 0px 28px !important;
+}
+.test3{
+border-radius: 0px 0px 28px 0px !important;
+}
+  }
