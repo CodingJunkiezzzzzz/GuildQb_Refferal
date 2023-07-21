@@ -1,5 +1,5 @@
-import React from "react";
-import "./Header.css";
+import React from 'react';
+// import "./Header.css";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
@@ -11,12 +11,9 @@ import pt_logo from '../Assets/pt_logomain.png'
 import twi_logo from '../Assets/twi.png'
 import discord_logo from '../Assets/discord.png'
 
-
-
-function Header({handleButtonClick}) {
+const Header_two = () => {
   return (
-    <div className="">
-      <>
+    <div>
         <Navbar collapseOnSelect expand="lg" className="NavUpperMain">
           <Container className="">
             <Navbar.Brand className="text-white" href="#home">
@@ -32,13 +29,12 @@ function Header({handleButtonClick}) {
             <Navbar.Collapse id="responsive-navbar-nav">
               <Nav className="me-auto firstNavLink">
                 
-                <Nav.Link className="MainLink"  href="#">Metaverse</Nav.Link>
+                <Nav.Link className="MainLink" href="#">Metaverse</Nav.Link>
                 <Nav.Link className="MainLink" href="#">Token</Nav.Link>
                 <Nav.Link className="MainLink" href="#">Quest</Nav.Link>
                 <Nav.Link className="MainLink" href="#">OharaiNFT</Nav.Link>
                 <Nav.Link className="MainLink" href="#">Scholarship</Nav.Link>
                 <Nav.Link className="MainLink" href="#">Dock</Nav.Link>
-        
                 
               </Nav>
 
@@ -49,20 +45,20 @@ function Header({handleButtonClick}) {
                     <option className="optionsLnk" value="1">Japanese</option>
                   </Form.Select>
                 </Nav.Link>
-                <Nav.Link className="walletConnect" href="#" onClick={() => handleButtonClick(0)}
-                // className={collection == 0 ? "active" : "non_active"}
-                ><FaWallet className="wallet"/>Connect wallet</Nav.Link>
+                <Nav.Link className="ptbX mg" href="#"><img src={pt_logo} alt="#" className="ptimgg" />0 pt</Nav.Link>
+
+                <Nav.Link className="ms-2 mg" href="#">
+                  <div className="d-flex align-items-center gap-3">
+                    <img src={discord_logo} alt="" className="twi" />
+                    <img src={twi_logo} alt="" className="twi" />
+                  </div>
+                </Nav.Link>
               </Nav>
             </Navbar.Collapse>
           </Container>
         </Navbar>
-      </>
-
-      {/* -------------Navebar 2------------- */}
-
-      
     </div>
-  );
+  )
 }
 
-export default Header;
+export default Header_two
