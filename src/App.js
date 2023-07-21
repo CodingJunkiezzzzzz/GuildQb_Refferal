@@ -18,14 +18,6 @@ function App() {
   return (
     <div className="App">
       <Header/>
-      {/* <MyVerticallyCenteredModal /> */}
-
-<SelectRewards />
-
-<Reffereal_main />
-
-
-
       <Reward_sec/>
       <Tablle/>
       <How_it_work/>
