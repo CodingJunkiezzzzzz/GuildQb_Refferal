@@ -18,8 +18,8 @@ export default function Already_ref() {
                 Connect wallet to see your rewards and <br /> get more rewards!
               </h1>
 
-              <div className="mt-5">
-                <button className="waletbtn">
+              <div className="mt-5 ">
+                <button className="btn waletbtn poniter">
                   {" "}
                   <FaWallet /> <span className="some"> Connect wallet</span>
                 </button>

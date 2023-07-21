@@ -5,9 +5,13 @@ import twiter from "../Assets/soic_twi.svg";
 import fb from "../Assets/fb.svg";
 import award from "../Assets/award.svg";
 import Refferal_modal from "../Refferal_modal/Refferal_modal";
+import SelectRewards from "../SelectRewards/SelectRewards";
+
 
 export default function Reffereal_main() {
   const [modalShow, setModalShow] = React.useState(false);
+  const [modalShoww, setModalShoww] = React.useState(false);
+
   return (
     <div className="Refferal_main_page ">
       <div className="container-fluid fourth_k ">
@@ -59,6 +63,10 @@ export default function Reffereal_main() {
                   show={modalShow}
                   onHide={() => setModalShow(false)}
                 />
+     <SelectRewards
+        showw={modalShoww}
+        onHide={() => setModalShoww(false)}
+      />
               </div>
               <p className="para_ref">
                 You've received your referral link, and sharing it with your
@@ -89,7 +97,7 @@ export default function Reffereal_main() {
               <h1>0</h1>
             </div>
           </div>
-          <div className="col-md-4 px-0 px-md-1 col-12 mt-3 mt-md-0">
+          <div onClick={() => setModalShoww(true)} className="col-md-4 px-0 px-md-1 col-12 mt-3 mt-md-0">
             <div className="color_ref text-center">
               {/* <p >Left Points</p> */}
               <img src={award} alt="" />
@@ -97,7 +105,10 @@ export default function Reffereal_main() {
             </div>
           </div>
         </div>
-
+        <SelectRewards
+        show={modalShoww}
+        onHide={() => setModalShoww(false)}
+      />
 
         {/* last table with white header  */}
 

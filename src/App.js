@@ -22,8 +22,10 @@ function App() {
 
 <SelectRewards />
 
+<Reffereal_main />
 
-{/* 
+
+
       <Reward_sec/>
       <Tablle/>
       <How_it_work/>
@@ -31,7 +33,7 @@ function App() {
       <Already_ref />
       <ReferFQ/>
       <FAQ/>
-      <Footer /> */}
+      <Footer />
     </div>
   );
 }

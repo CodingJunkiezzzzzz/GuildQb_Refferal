@@ -34,7 +34,7 @@ export default function SelectRewards(props) {
               <img src={pml} alt="" className="modelimg" />
 
               <button className="clam">
-                <span className="clamtext">Clam 1 </span>
+                <span className="clamtext">Clam  </span>
               </button>
             </div>
 
@@ -42,7 +42,7 @@ export default function SelectRewards(props) {
               <img src={pml} alt="" className="modelimg" />
 
               <button className="clam">
-                <span className="clamtext">Clam 2 </span>
+                <span className="clamtext">Clam   </span>
               </button>
             </div>
 
@@ -50,28 +50,28 @@ export default function SelectRewards(props) {
               <img src={pml} alt="" className="modelimg" />
 
               <button className="clam">
-                <span className="clamtext">Clam 3</span>
+                <span className="clamtext">Clam </span>
               </button>
             </div>
             <div className="shift d-flex justify-content-center">
               <img src={pml} alt="" className="modelimg" />
 
               <button className="clam">
-                <span className="clamtext">Clam 4</span>
+                <span className="clamtext">Clam </span>
               </button>
             </div>
             <div className=" shift d-flex justify-content-center">
               <img src={pml} alt="" className="modelimg" />
 
               <button className="clam">
-                <span className="clamtext">Clam 5</span>
+                <span className="clamtext">Clam </span>
               </button>
             </div>
             <div className="shift d-flex justify-content-center d-block d-lg-none">
               <img src={pml} alt="" className="modelimg" />
 
               <button className="clam">
-                <span className="clamtext">Clam 66</span>
+                <span className="clamtext">Clam </span>
               </button>
             </div>
           </div>
@@ -83,7 +83,7 @@ export default function SelectRewards(props) {
               <img src={pml} alt="" className="modelimg" />
 
               <button className="clam">
-                <span className="clamtext">Clam 6 </span>
+                <span className="clamtext">Clam </span>
               </button>
             </div>
 
@@ -91,7 +91,7 @@ export default function SelectRewards(props) {
               <img src={pml} alt="" className="modelimg" />
 
               <button className="clam">
-                <span className="clamtext">Clam 7 </span>
+                <span className="clamtext">Clam  </span>
               </button>
             </div>
 
@@ -107,7 +107,7 @@ export default function SelectRewards(props) {
               <img src={pml} alt="" className="modelimg" />
 
               <button className="clam justjust">
-                <span className="clamtext">Clam 9 </span>
+                <span className="clamtext">Clam  </span>
               </button>
             </div>
           </div>
