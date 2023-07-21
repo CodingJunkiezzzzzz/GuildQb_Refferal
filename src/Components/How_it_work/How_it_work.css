@@ -1,6 +1,6 @@
 .main_how_work{
 
-    padding: 77px 10px 20px 10px;
+    padding: 77px 10px 0 10px;
 background-color: #130732;
 }
 
@@ -9,12 +9,14 @@ background-color: #130732;
 background-position: center;
 background-repeat: no-repeat;
 background-size: cover;
+padding: 40px 0;
 }
 .work_contentt{
     background-image:url(../Assets/how_bg.png);
 background-position: center;
 background-repeat: no-repeat;
 background-size: contain;
+padding: 20px 0;
 }
 
 .work_contentt h1 {
@@ -46,7 +48,8 @@ transform: rotate(-90deg);
 }
 
 .left_bor_content{
-    border-left: 1px solid white;
+    border-left: 1px solid;
+    border-image: linear-gradient(119deg, #8217F4 19.01%, #00D1FF 100%) 1;
     padding: 0px 0px 10px 30px ;
     text-align: left;
     /* height: 124px ; */

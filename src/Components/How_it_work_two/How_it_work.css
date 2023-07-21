@@ -1,15 +1,15 @@
 .main_how_work{
 
-    padding: 77px 10px 20px 10px;
+    padding: 77px 10px 0 10px;
 background-color: #130732;
 }
 
-.work_content{
+/* .work_content{
     background-image:url(../Assets/how_bg.png);
 background-position: center;
 background-repeat: no-repeat;
 background-size: cover;
-}
+} */
 .work_content h1 {
     color: white !important;
 }

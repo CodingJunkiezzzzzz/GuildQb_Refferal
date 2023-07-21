@@ -4,8 +4,10 @@ import lf from "../Assets/lf.svg";
 import lK from "../Assets/b.png";
 import lb from "../Assets/a.png";
 import { FaWallet } from "react-icons/fa";
+import { useTranslation } from "react-i18next";
 
 export default function Already_ref() {
+  const {t} = useTranslation();
   return (
     <div className="alredy_ref_main">
       <div className="container">
@@ -14,8 +16,8 @@ export default function Already_ref() {
             <div className="box_ref   jojo">
               <div className="circlu"></div>
               <h1>
-                Already referred? <br />
-                Connect wallet to see your rewards and <br /> get more rewards!
+                {t('Already referred?')} <br />
+                {t('Connect wallet to see your rewards and')} <br /> {t('get more rewards!')}
               </h1>
 
               <div className="mt-5 ">

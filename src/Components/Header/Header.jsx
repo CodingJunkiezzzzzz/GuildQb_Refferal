@@ -10,10 +10,14 @@ import qb_mobl_logo from '../Assets/mobile_logo.png'
 import pt_logo from '../Assets/pt_logomain.png'
 import twi_logo from '../Assets/twi.png'
 import discord_logo from '../Assets/discord.png'
+import i18next from "i18next";
 
 
 
-function Header({handleButtonClick}) {
+function Header({handleButtonClick},props) {
+  const handleClick=(e)=>{
+    i18next.changeLanguage(e.target.value)
+}
   return (
     <div className="">
       <>
@@ -44,9 +48,9 @@ function Header({handleButtonClick}) {
 
               <Nav className="d-flex align-items-center">
                 <Nav.Link href="#" className="sltUpper">
-                  <Form.Select aria-label="Default select example" className="selt_main">
-                    <option className="optionsLnk">English</option>
-                    <option className="optionsLnk" value="1">Japanese</option>
+                  <Form.Select aria-label="Default select example" onChange={(e)=> handleClick(e)} className="selt_main">
+                    <option className="optionsLnk" value={'en'}>English</option>
+                    <option className="optionsLnk" value={'jp'}>Japanese</option>
                   </Form.Select>
                 </Nav.Link>
                 <Nav.Link className="walletConnect" href="#" onClick={() => handleButtonClick(0)}
