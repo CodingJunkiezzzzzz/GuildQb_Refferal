@@ -43,7 +43,7 @@ function App() {
 
       <Already_ref />
       <ReferFQ />
-      <FAQ />
+      {/* <FAQ /> */}
       <Footer />
     </div>
   );

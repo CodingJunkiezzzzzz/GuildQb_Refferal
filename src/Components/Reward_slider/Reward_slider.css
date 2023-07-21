@@ -96,6 +96,7 @@
 
 .blowpadd{
   padding-bottom: 30px !important;
+  padding-top: 34px !important;
 }
 
 @media only screen and (max-width: 600px) {
