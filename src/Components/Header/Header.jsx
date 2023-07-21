@@ -10,9 +10,11 @@ import qb_mobl_logo from '../Assets/mobile_logo.png'
 import pt_logo from '../Assets/pt_logomain.png'
 import twi_logo from '../Assets/twi.png'
 import discord_logo from '../Assets/discord.png'
+import SelectRewards from "../SelectRewards/SelectRewards";
 
 
 function Header() {
+  const [modalShow, setModalShow] = React.useState(false);
   return (
     <div className="">
       <>
@@ -31,12 +33,16 @@ function Header() {
             <Navbar.Collapse id="responsive-navbar-nav">
               <Nav className="me-auto firstNavLink">
                 
-                <Nav.Link className="MainLink" href="#">Metaverse</Nav.Link>
+                <Nav.Link className="MainLink" onClick={() => setModalShow(true)} href="#">Metaverse</Nav.Link>
                 <Nav.Link className="MainLink" href="#">Token</Nav.Link>
                 <Nav.Link className="MainLink" href="#">Quest</Nav.Link>
                 <Nav.Link className="MainLink" href="#">OharaiNFT</Nav.Link>
                 <Nav.Link className="MainLink" href="#">Scholarship</Nav.Link>
                 <Nav.Link className="MainLink" href="#">Dock</Nav.Link>
+                <SelectRewards
+        show={modalShow}
+        onHide={() => setModalShow(false)}
+      />
                 
               </Nav>
 
