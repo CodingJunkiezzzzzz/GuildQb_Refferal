@@ -12,7 +12,10 @@
   border-radius: 0px 0px 33px 33px;
   background: rgba(18, 7, 49, 0.47);
   backdrop-filter: blur(10px) !important;
-  border-bottom: 2px solid #8217f4;
+  border-bottom: 2px solid transparent;
+  background-image: linear-gradient(90deg, #19171f, #130737), linear-gradient(90deg, hsl(289, 65%, 64%), hsl(226, 78%, 67%));
+    background-clip: padding-box, border-box;
+    background-origin: border-box;
   position: absolute;
   z-index: 1;
   width: 100%;
@@ -102,13 +105,13 @@
 }
 
 .selt_main {
+  cursor: pointer !important;
   background-color: transparent;
   color: white;
   font-size: 14px;
-  border-radius: 30px;
   height: 48px;
-  border: 2px solid #8217f4 !important;
-  cursor: pointer !important;
+  border-radius: 30px;
+  border: 2px solid #8217f4 ;
 }
 .selt_main:focus {
   border-color: none !important;

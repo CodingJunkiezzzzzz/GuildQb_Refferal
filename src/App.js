@@ -15,8 +15,6 @@ function App() {
   return (
     <div className="App">
       <Header/>
-
-
       <Reward_sec/>
       <Tablle/>
       <How_it_work/>

@@ -2,7 +2,7 @@
   background-image: url(../Assets/reward_bg.png);
   /* background-position: center; */
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 100%;
   position: relative;
   /* z-index: -1; */
   background-color: #130732;
@@ -10,7 +10,6 @@
 
 .main_titleLayer {
   font-family: "Murecho", sans-serif;
-  color: #fff !important ;
   font-size: 54px;
   font-style: normal;
   font-weight: 800;
@@ -19,6 +18,10 @@
   margin-bottom: 0px;
   text-align: start;
   margin-top: 40px;
+  background: linear-gradient(133deg, #fff 0%, #b8dfff 51.04%, #ffd8fb 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .subtitle {
@@ -67,7 +70,7 @@
 /* -------------------------exclusive style -------------------- */
 
 .exclusivemainUpper {
-  margin-top: 70px;
+  margin-top: 109px;
 }
 
 .exclusive_titleupper {
@@ -114,7 +117,50 @@
   display: none;
 }
 
+.gradf {
+  border-radius: 587px;
+  background: rgba(242, 0, 220, 0.21);
+  filter: blur(120px);
+  width: 500px;
+  height: 356px;
+  flex-shrink: 0;
+  position: absolute;
+  left: -1rem;
+  top: -6px;
+}
+.gradf2 {
+  border-radius: 576px;
+  background: rgba(49, 0, 255, 0.13);
+  filter: blur(120px);
+  width: 500px;
+  height: 356px;
+  flex-shrink: 0;
+  position: absolute;
+  right: 2rem;
+  top: -6px;
+}
+
+.sldRmaiN {
+  position: relative;
+}
+
 @media only screen and (max-width: 600px) {
+  .gradf {
+    border-radius: 587px;
+    background: rgba(242, 0, 220, 0.21);
+    filter: blur(120px);
+    width: 465px;
+    height: 419px;
+    flex-shrink: 0;
+    position: absolute;
+    left: -17rem;
+    top: -7rem;
+  }
+
+  .moblBackpurp {
+    position: relative;
+  }
+
   .slDPicSty {
     width: 100%;
   }
@@ -178,7 +224,22 @@
 }
 
 @media (min-width: 600px) and (max-width: 768px) {
+  .gradf {
+    border-radius: 587px;
+    background: rgba(242, 0, 220, 0.21);
+    filter: blur(120px);
+    width: 361px;
+    height: 326px;
+    flex-shrink: 0;
+    position: absolute;
+    left: -7rem;
+    top: -6rem;
+  }
+
   .rk {
+    display: none;
+  }
+  .gradf2 {
     display: none;
   }
 
@@ -225,6 +286,24 @@
 }
 
 @media (min-width: 769px) and (max-width: 820px) {
+
+  .gradf {
+    border-radius: 587px;
+    background: rgba(242, 0, 220, 0.21);
+    filter: blur(120px);
+    width: 361px;
+    height: 326px;
+    flex-shrink: 0;
+    position: absolute;
+    left: -7rem;
+    top: -6rem;
+  }
+
+
+  .gradf2 {
+    display: none;
+  }
+
   .rk {
     display: none;
   }

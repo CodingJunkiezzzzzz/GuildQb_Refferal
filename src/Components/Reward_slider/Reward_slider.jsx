@@ -18,15 +18,15 @@ function Reward_slider() {
       <Swiper
         slidesPerView={1}
         spaceBetween={30}
-        Loop={true}
+        loop={true}
         navigation={true}
         pagination={{
           clickable: true,
         }}
-        // autoplay={{
-        //     delay: 2000,
-        //     disableOnInteraction: false,
-        //   }}
+        autoplay={{
+            delay: 2000,
+            disableOnInteraction: false,
+          }}
         breakpoints={{
             320: {
               slidesPerView: 2,
@@ -54,7 +54,7 @@ function Reward_slider() {
             },
           }}
         modules={[ Navigation, Autoplay, Pagination]}
-        className="mySwiper"
+        className="mySwiper blowpadd "
       >
         <SwiperSlide className='text-danger'>
             <div className="crtUpper">
@@ -94,6 +94,11 @@ function Reward_slider() {
         <SwiperSlide className='text-danger'>
             <div className="crtUpper">
                 <img src={ref_picc2} alt="" className="slDPicSty" />
+                </div> 
+        </SwiperSlide>
+        <SwiperSlide className='text-danger'>
+            <div className="crtUpper">
+                <img src={ref_picc3} alt="" className="slDPicSty" />
                 </div> 
         </SwiperSlide>
         <SwiperSlide className='text-danger'>

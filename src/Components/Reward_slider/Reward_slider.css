@@ -43,11 +43,6 @@
   border-radius: 50%;
 }
 
-
-.swiper-pagination-bullet{
-  color: blue !important;
-}
-
 .swiper-button-prev:after,
 .swiper-button-next:after {
   font-family: none !important;
@@ -75,6 +70,32 @@
   justify-content: center !important;
   align-items: center !important;
   content: url(../Assets/leftV.png) !important;
+}
+
+.swiper-pagination {
+  position: relative !important;
+  top: 33px !important;
+  text-align: center;
+  transition: 300ms opacity;
+  transform: translate3d(0, 0, 0);
+  z-index: 10;
+  /* background-color: red; */
+}
+
+.swiper-pagination-bullet{
+  background-color: gray !important;
+  opacity: 1 !important;
+  width: 10px !important;
+  height: 5px !important;
+  border-radius: 0 !important;
+}
+
+.swiper-pagination-bullet-active{
+  background-image: linear-gradient(to right, #2db3fe, #9fddff) !important;
+}
+
+.blowpadd{
+  padding-bottom: 30px !important;
 }
 
 @media only screen and (max-width: 600px) {

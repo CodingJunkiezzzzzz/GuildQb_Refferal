@@ -30,8 +30,10 @@ function Reward_sec() {
           </div>
         </div>
 
-        <div className="row rec sldr_colorTab ">
-          <div className="col-lg-12 pb-5 larglaptb">
+        <div className="row rec sldr_colorTab sldRmaiN">
+          <div className="col-lg-12 pb-5 larglaptb sldrsecside">
+        <div className='gradf'></div>
+        <div className='gradf2'></div>
             <Reward_slider/>
           </div>
         </div>
@@ -49,8 +51,9 @@ function Reward_sec() {
           </div>
         </div>
 
-        <div className="row  sldr_colorTab ">
+        <div className="row  sldr_colorTab moblBackpurp ">
           <div className="col-lg-12 pb-5">
+        <div className='gradf'></div>
             <Reward_slider/>
           </div>
         </div>
