@@ -41,7 +41,8 @@
   margin-top: 60px;
   margin-bottom: 60px;
   display: flex;
-  justify-content: end;
+  /* justify-content: end; */
+  padding-left: 80px;
 }
 
 .reward_but {
@@ -407,7 +408,7 @@
   }
 
   .exclusivemainUpper {
-    margin-top: 3rem;
+    margin-top: 12rem;
   }
 
   .larglaptb {
@@ -421,7 +422,7 @@
   }
 
   .exclusivemainUpper {
-    margin-top: 3rem;
+    margin-top: 9rem;
   }
 
   .larglaptb {
@@ -467,4 +468,14 @@
   .main_titleLayer{
     font-size: 45px;
   }
+}
+
+@media (min-width: 1600px) and (max-width: 4500px) {
+  .slDPicSty{
+    width: auto !important;
+  }
+}
+
+.swiper-horizontal > .swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal{
+  display: none;
 }

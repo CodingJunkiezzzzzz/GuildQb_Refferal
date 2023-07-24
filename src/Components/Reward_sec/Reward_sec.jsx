@@ -74,9 +74,13 @@ function Reward_sec() {
                 {t("Rewards for Referrals!")}
               </h1>
               <h5 className="exclu_subtitle">
-                Earn 1 point for every friend who installs GuildQB and your
-                friend will get 1 <br className="rk3" /> point too. Get
-                different kinds of rewards with your points.
+              {t(
+                  "Earn 1 point for every friend who installs GuildQB and your friend will get 1"
+                )} <br className="rk3" /> {t(
+                  "point too. Get different"
+                )} {t(
+                  "kinds of rewards with your points."
+                )}
               </h5>
             </div>
           </div>

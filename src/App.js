@@ -27,10 +27,11 @@ function App() {
   return (
     <div className="App">
       {collection == 0 ? (<><Header_two /></>) : (<><Header handleButtonClick={handleButtonClick}/></>)}
-      <Routes>
-        <Route path="/" element={<Home collection={collection}/>} />
-        <Route path="/Reffereal" element={<Reffereal_main />} />
-        </Routes>
+      <Home collection={collection}/>
+      {/* <Routes> */}
+        {/* <Route path="/" element={} /> */}
+        {/* <Route path="/Reffereal" element={<Reffereal_main />} /> */}
+        {/* </Routes> */}
       <Footer />
     </div>
   );

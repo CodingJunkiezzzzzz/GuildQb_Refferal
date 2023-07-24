@@ -24,7 +24,7 @@ function Header({ handleButtonClick }, props) {
     <div className="">
       <>
         <Navbar collapseOnSelect expand="lg" className="NavUpperMain">
-          <Container className="">
+          <Container className="nav_ka_contai">
             <Navbar.Brand className="text-white" href="#home">
               <Link to="/">
               <div>
@@ -56,9 +56,7 @@ function Header({ handleButtonClick }, props) {
                   Token
                 </Nav.Link>
                   <Nav.Link className="MainLink" href="#">
-                <Link className="leenk" to="/Reffereal">
                     Quest
-                </Link>
                   </Nav.Link>
                 <Nav.Link className="MainLink" href="#">
                   OharaiNFT

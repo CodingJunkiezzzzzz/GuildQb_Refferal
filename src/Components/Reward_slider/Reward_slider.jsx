@@ -14,7 +14,7 @@ import ref_picc3 from "../Assets/ref_immg3.png"
 function Reward_slider() {
   return (
     <div>
-      <>
+      <div className=''>
       <Swiper
         slidesPerView={1}
         spaceBetween={30}
@@ -51,6 +51,10 @@ function Reward_slider() {
             1024: {
               slidesPerView: 5,
               spaceBetween: 50,
+            },
+            2024: {
+              slidesPerView: 6,
+              spaceBetween: 30,
             },
           }}
         modules={[ Navigation, Autoplay, Pagination]}
@@ -107,7 +111,7 @@ function Reward_slider() {
                 </div> 
         </SwiperSlide>
       </Swiper>
-    </>
+    </div>
     </div>
   )
 }

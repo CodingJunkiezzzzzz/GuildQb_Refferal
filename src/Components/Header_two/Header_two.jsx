@@ -50,9 +50,7 @@ const Header_two = () => {
                 Token
               </Nav.Link>
               <Nav.Link className="MainLink" href="#">
-              <Link className="leenk" to="/Reffereal">
                     Quest
-                </Link>
               </Nav.Link>
               <Nav.Link className="MainLink" href="#">
                 OharaiNFT
