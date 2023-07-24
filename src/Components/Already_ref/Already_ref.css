@@ -6,11 +6,11 @@
 .box_ref h1 {
   font-size: 48px;
   font-style: normal;
-  font-weight: 800;
+  font-weight: 700;
   line-height: 116%; /* 55.68px */
   letter-spacing: 0.96px;
   text-align: center;
-  font-family: "Murecho", sans-serif;
+  /* font-family: "Murecho", sans-serif; */
 
   color: white !important;
 }
@@ -93,7 +93,7 @@
   .box_ref h1 {
     color: var(--white, #fff);
     text-align: center;
-    font-family: Murecho;
+    /* font-family: Murecho; */
     font-size: 24px;
     font-style: normal;
     font-weight: 800;

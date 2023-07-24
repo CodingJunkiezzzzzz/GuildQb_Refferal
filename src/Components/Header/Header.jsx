@@ -14,16 +14,14 @@ import i18next from "i18next";
 import { Select, Space } from "antd";
 
 
-const handleChange = (value) => {
-  console.log(`selected ${value}`);
-};
+
 
 function Header({ handleButtonClick }, props) {
-  const handleClick = (e) => {
-    i18next.changeLanguage(e.target.value);
-
-    
+  const handleChange = (value) => {
+    console.log(`selected ${value}`);
+    i18next.changeLanguage(value);
   };
+ 
   return (
     <div className="">
       <>
@@ -36,7 +34,7 @@ function Header({ handleButtonClick }, props) {
               </div>
             </Navbar.Brand>
             <div className="d-flex gap-3">
-              <Nav.Link className="walletConnect2" href="#">
+              <Nav.Link className="walletConnect2" href="#" onClick={() => handleButtonClick(0)}>
                 <FaWallet className="wallet" />
                 Connect
               </Nav.Link>
@@ -76,11 +74,11 @@ function Header({ handleButtonClick }, props) {
                       onChange={handleChange}
                       options={[
                         {
-                          value: "English",
+                          value: "en",
                           label: "English",
                         },
                         {
-                          value: "Japanese",
+                          value: "jp",
                           label: "Japanese",
                         },
                       ]}

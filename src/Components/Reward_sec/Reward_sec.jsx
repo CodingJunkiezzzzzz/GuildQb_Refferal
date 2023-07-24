@@ -46,7 +46,7 @@ function Reward_sec() {
       <div className="row exclusivemainUpper  justify-content-center ">
           <div className="col-lg-7">
             <div className="exclusive_titleupper">
-              <h1 className='exclusive_title'>{t('Win GuildQB Exclusive')} <br className='hod' /> Rewards for Referrals!</h1>
+              <h1 className='exclusive_title'>{t('Win GuildQB Exclusive')} <br className='hod' /> {t('Rewards for Referrals!')}</h1>
               <h5 className='exclu_subtitle'>Earn 1 point for every friend who installs GuildQB and your friend will get 1 <br className='rk3'/> point too. Get different kinds of rewards with your points.</h5>
             </div>
           </div>

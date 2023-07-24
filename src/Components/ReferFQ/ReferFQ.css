@@ -1,10 +1,10 @@
 .faqh2{
         color: #FFF;
 text-align: center;
-font-family: Murecho;
+/* font-family: Murecho; */
 font-size: 48px;
 font-style: normal;
-font-weight: 800;
+font-weight: 700;
 line-height: 116%; /* 55.68px */
 letter-spacing: 0.96px;
 padding-bottom: 60px !important;
@@ -99,4 +99,10 @@ letter-spacing: 0.14px;
     background-repeat: no-repeat;
     background-size: var(--bs-accordion-btn-icon-width);
     transition: var(--bs-accordion-btn-icon-transition);
+}
+
+@media screen and (max-width: 600px) {
+    .faqh2{
+        font-size: 36px;
+    }
 }

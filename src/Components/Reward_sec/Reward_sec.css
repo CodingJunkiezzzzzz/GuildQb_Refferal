@@ -9,10 +9,10 @@
 }
 
 .main_titleLayer {
-  font-family: "Murecho", sans-serif;
+  /* font-family: "Murecho"; */
   font-size: 58px;
   font-style: normal;
-  font-weight: 800;
+  font-weight: 700;
   line-height: 116.5%; /* 67.57px */
   letter-spacing: 1.16px;
   margin-bottom: 0px;
@@ -84,7 +84,7 @@
   line-height: 116%; /* 55.68px */
   letter-spacing: 0.96px;
   color: #fff;
-  font-family: "Murecho", sans-serif;
+  /* font-family: "Murecho", sans-serif; */
 }
 
 .exclu_subtitle {
@@ -195,18 +195,6 @@
     justify-content: center !important;
   }
 
-  .rk {
-    display: none;
-  }
-
-  .main_titleLayer {
-    font-size: 48px;
-    font-weight: 800;
-    margin-bottom: 0px;
-    margin-top: 40px;
-    text-align: start;
-  }
-
   .reward_but {
     width: 100%;
   }
@@ -216,7 +204,7 @@
   }
 
   .exclusive_title {
-    font-size: 42px;
+    font-size: 36px;
   }
   .exclu_subtitle {
     font-size: 14px;
@@ -236,9 +224,7 @@
     top: -6rem;
   }
 
-  .rk {
-    display: none;
-  }
+  
   .gradf2 {
     display: none;
   }
@@ -304,9 +290,7 @@
     display: none;
   }
 
-  .rk {
-    display: none;
-  }
+  
 
   .rk3 {
     display: block;
@@ -339,9 +323,7 @@
 }
 
 @media (min-width: 821px) and (max-width: 991px) {
-  .rk {
-    display: none;
-  }
+  
 
   .rwd_back {
     background-image: url(../Assets/tab_bgrwaer.png);
@@ -372,9 +354,7 @@
 }
 
 @media (min-width: 992px) and (max-width: 1024px) {
-  .rk {
-    display: none;
-  }
+  
   .rk3 {
     display: block;
   }
@@ -408,5 +388,45 @@
 
   .larglaptb {
     padding-top: 5rem;
+  }
+}
+
+@media screen and (max-width: 820px) {
+  .rk{
+    display: none;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .main_titleLayer {
+    font-size: 32px;
+    font-weight: 900;
+  }
+}
+
+@media (min-width: 321px) and (max-width: 380px) {
+  .main_titleLayer {
+    font-size: 36px;
+    font-weight: 900;
+  }
+}
+
+@media (min-width: 381px) and (max-width: 400px) {
+  .main_titleLayer {
+    font-size: 40px;
+    font-weight: 900;
+  }
+}
+
+@media (min-width: 401px) and (max-width: 600px) {
+  .main_titleLayer {
+    font-size: 42px;
+    font-weight: 900;
+  }
+}
+
+@media (min-width: 551px) and (max-width: 950px) {
+  .main_titleLayer{
+    font-size: 45px;
   }
 }
