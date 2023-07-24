@@ -39,15 +39,15 @@ const Header_two = () => {
               </Nav>
 
               <Nav className="d-flex align-items-center">
-                <Nav.Link href="#" className="sltUpper">
+                <Nav.Link href="" className="sltUpper">
                   <Form.Select aria-label="Default select example" className="selt_main">
                     <option className="optionsLnk">English</option>
                     <option className="optionsLnk" value="1">Japanese</option>
                   </Form.Select>
                 </Nav.Link>
-                <Nav.Link className="ptbX mg" href="#"><img src={pt_logo} alt="#" className="ptimgg" />0 pt</Nav.Link>
+                <Nav.Link className="ptbX mg" href=""><img src={pt_logo} alt="#" className="ptimgg" />0 pt</Nav.Link>
 
-                <Nav.Link className="ms-2 mg" href="#">
+                <Nav.Link className="ms-2 mg" href="">
                   <div className="d-flex align-items-center gap-3">
                     <img src={discord_logo} alt="" className="twi" />
                     <img src={twi_logo} alt="" className="twi" />
