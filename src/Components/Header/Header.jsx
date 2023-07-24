@@ -69,9 +69,9 @@ function Header({ handleButtonClick }, props) {
 
               <Nav className="d-flex align-items-center">
                 <Nav.Link href="" className="sltUpper">
-                  {/* <Space wrap className="">
+                  <Space wrap className="">
                     <Select
-                    className=""
+                    className="kop "
                       defaultValue="English"
                       onChange={handleChange}
                       options={[
@@ -85,11 +85,11 @@ function Header({ handleButtonClick }, props) {
                         },
                       ]}
                     />
-                  </Space> */}
-                  <Form.Select href="#" aria-label="Default select example" onChange={(e)=> handleClick(e)} className="selt_main">
+                  </Space>
+                  {/* <Form.Select href="#" aria-label="Default select example" onChange={(e)=> handleClick(e)} className="selt_main">
                     <option href="#" className="optionsLnk" value={'en'}>English</option>
                     <option href="#" className="optionsLnk" value={'jp'}>Japanese</option>
-                  </Form.Select>
+                  </Form.Select> */}
                 </Nav.Link>
                 <Nav.Link
                   className="walletConnect"
