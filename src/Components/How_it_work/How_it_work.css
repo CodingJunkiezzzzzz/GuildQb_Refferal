@@ -71,7 +71,7 @@ background: var(--gradient-1, linear-gradient(119deg, #8217F4 19.01%, #00D1FF 10
 font-size: 14px;
 font-style: normal;
 font-weight: 500;
-line-height: 150%; /* 21px */
+line-height: 150%;
 letter-spacing: 0.14px;
 text-transform: uppercase;
 color: #fff;
@@ -95,7 +95,7 @@ text-align: left;
 font-size: 28px;
 font-style: normal;
 font-weight: 800;
-line-height: 116%; /* 32.48px */
+line-height: 116%;
 letter-spacing: 0.56px;
 }
 
