@@ -209,6 +209,10 @@
   .exclu_subtitle {
     font-size: 14px;
   }
+  .rk4 {
+    display: none;
+  }
+
 }
 
 @media (min-width: 600px) and (max-width: 768px) {
@@ -231,6 +235,9 @@
 
   .rk3 {
     display: block;
+  }
+  .rk4 {
+    display: none;
   }
 
   .frPad {
@@ -272,6 +279,10 @@
 }
 
 @media (min-width: 769px) and (max-width: 820px) {
+
+  .rk4 {
+    display: none;
+  }
 
   .gradf {
     border-radius: 587px;
@@ -356,8 +367,21 @@
 @media (min-width: 992px) and (max-width: 1024px) {
   
   .rk3 {
-    display: block;
+    display: none;
   }
+  .rk4 {
+    display: none;
+  }
+  .exclusive_titleupper {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+}
+
+.exclu_subtitle {
+  width: 695px;
+}
   .main_titleLayer {
     font-size: 52px;
   }
@@ -377,13 +401,27 @@
   } */
 }
 
-@media (min-width: 1441px) and (max-width: 2600px) {
+@media (min-width: 1441px) and (max-width: 2560px) {
   .title_upper {
-    margin-top: 263px;
+    margin-top: 84px;
   }
 
   .exclusivemainUpper {
-    margin-top: 43rem;
+    margin-top: 3rem;
+  }
+
+  .larglaptb {
+    padding-top: 5rem;
+  }
+}
+
+@media (min-width: 2561px) and (max-width: 2773px) {
+  .title_upper {
+    margin-top: 84px;
+  }
+
+  .exclusivemainUpper {
+    margin-top: 3rem;
   }
 
   .larglaptb {
