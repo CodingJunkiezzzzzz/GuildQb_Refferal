@@ -2,7 +2,13 @@
 
 .Refferal_main_page {
   background-color: #130732 !important;
-  padding: 40px 70px 40px 70px;
+  padding: 140px 70px 40px 70px;
+}
+
+@media screen and (max-width: 850px) {
+  .Refferal_main_page{
+    padding: 140px 12px 12px 12px !important;
+  }
 }
 
 .quest_ref {
@@ -381,9 +387,6 @@
 
 
 @media (max-width: 600px) {
-  .Refferal_main_page {
-    padding: 12px !important;
-  }
   .fsfsww2 {
     display: none !important;
   }
@@ -402,7 +405,7 @@
     /* padding: 20px 40px; */
   }
   .Refferal_main_page {
-    padding: 54px !important;
+    padding: 120px 54px 54px 54px !important;
   }
   .refferal_modal_btn {
     width: 200px !important;
@@ -420,7 +423,7 @@
   }
 
   .referds {
-    font-size: 21px !important;
+    font-size: 20px !important;
   }
   .ref_left_content h1 {
     margin-top: 10px !important;

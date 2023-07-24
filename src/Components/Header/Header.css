@@ -177,6 +177,11 @@
   border: none;
 }
 
+.leenk{
+  text-decoration: none;
+  color: white;
+}
+
 .navbar-toggler-icon {
   display: inline-block;
   width: 1.5em;

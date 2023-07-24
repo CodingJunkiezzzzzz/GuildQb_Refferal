@@ -14,6 +14,8 @@ import Already_ref from "./Components/Already_ref/Already_ref";
 import SelectRewards from "./Components/SelectRewards/SelectRewards";
 import { useState } from "react";
 import Header_two from "./Components/Header_two/Header_two";
+import Home from "./Components/Home/Home";
+import { Route, Routes } from "react-router-dom";
 
 function App() {
   const [collection, setcollection] = useState();
@@ -22,28 +24,13 @@ function App() {
     setcollection(newData);
   };
 
-  console.log("collection", collection);
   return (
     <div className="App">
-      {/* <Header handleButtonClick={handleButtonClick} /> */}
-      
       {collection == 0 ? (<><Header_two /></>) : (<><Header handleButtonClick={handleButtonClick}/></>)}
-      {/* <Reffereal_main /> */}
-      <Reward_sec />
-      <Tablle />
-      {collection == 0 ? (
-        <>
-          <How_it_work_two />
-        </>
-      ) : (
-        <>
-          <How_it_work />
-        </>
-      )}
-
-      <Already_ref />
-      <ReferFQ />
-      {/* <FAQ /> */}
+      <Routes>
+        <Route path="/" element={<Home collection={collection}/>} />
+        <Route path="/Reffereal" element={<Reffereal_main />} />
+        </Routes>
       <Footer />
     </div>
   );

@@ -11,21 +11,25 @@ import pt_logo from "../Assets/pt_logomain.png";
 import twi_logo from "../Assets/twi.png";
 import discord_logo from "../Assets/discord.png";
 import { Select, Space } from "antd";
-
-const handleChange = (value) => {
-  console.log(`selected ${value}`);
-};
+import i18next from "i18next";
+import { Link } from "react-router-dom";
 
 const Header_two = () => {
+  const handleChange = (value) => {
+    console.log(`selected ${value}`);
+    i18next.changeLanguage(value);
+  };
   return (
     <div>
       <Navbar collapseOnSelect expand="lg" className="NavUpperMain">
         <Container className="">
           <Navbar.Brand className="text-white" href="#home">
+            <Link to="/">
             <div>
               <img src={qb_logo} alt="#" className="qbmain" />
               <img src={qb_mobl_logo} alt="#" className="qbMobil" />
             </div>
+            </Link>
           </Navbar.Brand>
           <div className="d-flex gap-3">
             <Nav.Link className="walletConnect2" href="#">
@@ -46,7 +50,9 @@ const Header_two = () => {
                 Token
               </Nav.Link>
               <Nav.Link className="MainLink" href="#">
-                Quest
+              <Link className="leenk" to="/Reffereal">
+                    Quest
+                </Link>
               </Nav.Link>
               <Nav.Link className="MainLink" href="#">
                 OharaiNFT
@@ -68,11 +74,11 @@ const Header_two = () => {
                     onChange={handleChange}
                     options={[
                       {
-                        value: "English",
+                        value: "en",
                         label: "English",
                       },
                       {
-                        value: "Japanese",
+                        value: "jp",
                         label: "Japanese",
                       },
                     ]}

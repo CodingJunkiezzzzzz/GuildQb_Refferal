@@ -12,29 +12,33 @@ import twi_logo from "../Assets/twi.png";
 import discord_logo from "../Assets/discord.png";
 import i18next from "i18next";
 import { Select, Space } from "antd";
-
-
-
+import { Link } from "react-router-dom";
 
 function Header({ handleButtonClick }, props) {
   const handleChange = (value) => {
     console.log(`selected ${value}`);
     i18next.changeLanguage(value);
   };
- 
+
   return (
     <div className="">
       <>
         <Navbar collapseOnSelect expand="lg" className="NavUpperMain">
           <Container className="">
             <Navbar.Brand className="text-white" href="#home">
+              <Link to="/">
               <div>
                 <img src={qb_logo} alt="#" className="qbmain" />
                 <img src={qb_mobl_logo} alt="#" className="qbMobil" />
               </div>
+              </Link>
             </Navbar.Brand>
             <div className="d-flex gap-3">
-              <Nav.Link className="walletConnect2" href="#" onClick={() => handleButtonClick(0)}>
+              <Nav.Link
+                className="walletConnect2"
+                href="#"
+                onClick={() => handleButtonClick(0)}
+              >
                 <FaWallet className="wallet" />
                 Connect
               </Nav.Link>
@@ -51,9 +55,11 @@ function Header({ handleButtonClick }, props) {
                 <Nav.Link className="MainLink" href="#">
                   Token
                 </Nav.Link>
-                <Nav.Link className="MainLink" href="#">
-                  Quest
-                </Nav.Link>
+                  <Nav.Link className="MainLink" href="#">
+                <Link className="leenk" to="/Reffereal">
+                    Quest
+                </Link>
+                  </Nav.Link>
                 <Nav.Link className="MainLink" href="#">
                   OharaiNFT
                 </Nav.Link>
@@ -69,7 +75,7 @@ function Header({ handleButtonClick }, props) {
                 <Nav.Link href="" className="sltUpper">
                   <Space wrap className="">
                     <Select
-                    className="kop "
+                      className="kop "
                       defaultValue="English"
                       onChange={handleChange}
                       options={[

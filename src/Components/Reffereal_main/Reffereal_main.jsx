@@ -13,7 +13,7 @@ export default function Reffereal_main() {
   const [modalShoww, setModalShoww] = React.useState(false);
 
   return (
-    <div className="Refferal_main_page ">
+    <div className="Refferal_main_page " id="Refferal">
       <div className="container-fluid fourth_k ">
         <nav aria-label="breadcrumb">
           <ol class="breadcrumb">
