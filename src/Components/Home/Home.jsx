@@ -17,7 +17,7 @@ const Home = ({collection}) => {
     <div>
       
       {/* <Reffereal_main /> */}
-      <Reward_sec />
+      <Reward_sec collection={collection}/>
       <Tablle />
       {collection == 0 ? (
         <>

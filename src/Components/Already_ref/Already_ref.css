@@ -63,6 +63,9 @@
   border-radius: 37px;
   border: none;
   background-image: linear-gradient(to right, #2db3fe, #9fddff);
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
 }
 .some {
   font-size: 16px;

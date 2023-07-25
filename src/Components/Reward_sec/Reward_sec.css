@@ -62,6 +62,9 @@
   width: 35%;
   border: none;
   font-family: "Murecho", sans-serif;
+  display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .walletReward {
@@ -198,6 +201,9 @@
 
   .reward_but {
     width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .hod {

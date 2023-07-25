@@ -4,8 +4,9 @@ import { FaWallet } from "react-icons/fa";
 import Header from "../Header/Header";
 import Reward_slider from "../Reward_slider/Reward_slider";
 import { useTranslation } from "react-i18next";
+import badge from "../Assets/reward.svg";
 
-function Reward_sec() {
+function Reward_sec({ collection }) {
   const { t } = useTranslation();
   return (
     <div>
@@ -22,12 +23,25 @@ function Reward_sec() {
                   "You’ll both earn Discord Supporter Role! And more for you to explore."
                 )}
               </h5>
-              <div className="d-flex justify-content-start">
-                <button className="reward_but">
-                  <FaWallet className="walletReward me-2" />
-                  Connect wallet
-                </button>
-              </div>
+              {collection == 0 ? (
+                <>
+                  <div className="d-flex justify-content-start">
+                    <button className="reward_but">
+                      <img src={badge} className="walletReward me-2" />
+                      earn rewards
+                    </button>
+                  </div>
+                </>
+              ) : (
+                <>
+                  <div className="d-flex justify-content-start">
+                    <button className="reward_but">
+                      <FaWallet className="walletReward me-2" />
+                      Connect wallet
+                    </button>
+                  </div>
+                </>
+              )}
             </div>
           </div>
         </div>
@@ -43,14 +57,8 @@ function Reward_sec() {
                 {t(
                   "Earn 1 point for every friend who installs GuildQB and your friend will get 1"
                 )}{" "}
-                <br className="rk3" />{" "}
-                {t(
-                  "point too. Get different"
-                )}
-                <br className="rk4" />{" "}
-                {t(
-                  "kinds of rewards with your points."
-                )}
+                <br className="rk3" /> {t("point too. Get different")}
+                <br className="rk4" /> {t("kinds of rewards with your points.")}
               </h5>
             </div>
           </div>
@@ -74,13 +82,11 @@ function Reward_sec() {
                 {t("Rewards for Referrals!")}
               </h1>
               <h5 className="exclu_subtitle">
-              {t(
+                {t(
                   "Earn 1 point for every friend who installs GuildQB and your friend will get 1"
-                )} <br className="rk3" /> {t(
-                  "point too. Get different"
-                )} {t(
-                  "kinds of rewards with your points."
-                )}
+                )}{" "}
+                <br className="rk3" /> {t("point too. Get different")}{" "}
+                {t("kinds of rewards with your points.")}
               </h5>
             </div>
           </div>

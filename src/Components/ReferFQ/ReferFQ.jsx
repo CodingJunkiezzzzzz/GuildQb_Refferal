@@ -23,7 +23,7 @@ function ReferFQ() {
                   <Accordion.Body>
                     <p className="text-white acc_text">
                       {t("This mechanism was created to reward our users and grow the GuildQB community. You can invite friends to use GuildQB together with you. Rewards will be offered to you as a thank-you present from us. More invites come with more rewards! We welcome you to help share the product with your network.")}
-                      {/* This mechanism was created to reward our users and grow the GuildQB community. You can invite friends to use GuildQB together with you. Rewards will be offered to you as a thank-you present from us. More invites come with more rewards! We welcome you to help share the product with your network.  */}
+                      
                     </p>
                   </Accordion.Body>
                 </Accordion.Item>
@@ -45,7 +45,7 @@ function ReferFQ() {
                   <Accordion.Body>
                     <p className="text-white acc_text">
                       {t("Please kindly see the 'EXCLUSIVE REWARDS' column for more details of the rewards in different scenarios. The rewards and the criteria may be updated throughout the development of GuildQB. Stay tuned.")}
-                      {/* This mechanism was created to reward our users and grow the GuildQB community. You can invite friends to use GuildQB together with you. Rewards will be offered to you as a thank-you present from us. More invites come with more rewards! We welcome you to help share the product with your network.  */}
+                      
                     </p>
                   </Accordion.Body>
                 </Accordion.Item>
@@ -65,7 +65,7 @@ function ReferFQ() {
                   <Accordion.Body>
                     <p className="text-white acc_text">
                       {t("If you wish to join the 'Refer a friend' program, you should connect your wallet to GuildQB's website. After that, you will be able to generate a unique link that you can send to your friends. After your friends complete the steps of downloading and joining GuildQB (What are the steps? See here.), you can see all the information, including the accounts and numbers you referred to, by visiting your personal 'Refer a Friend' control panel through clicking the 'Connect Wallet' on the 'Refer a friend' website page")}
-                      {/* This mechanism was created to reward our users and grow the GuildQB community. You can invite friends to use GuildQB together with you. Rewards will be offered to you as a thank-you present from us. More invites come with more rewards! We welcome you to help share the product with your network.  */}
+                      
                     </p>
                   </Accordion.Body>
                 </Accordion.Item>
@@ -85,7 +85,7 @@ function ReferFQ() {
                   <Accordion.Body>
                     <p className="text-white acc_text">
                       {t("One successful invitation equals one point. You can see your points through your personal 'Refer a Friend' control panel through clicking the 'Connect Wallet' then 'Earn Rewards' on the 'Refer a friend' website page. You can easily cash in for your rewards by simply clicking the 'Reward' button. Different points come with different rewards. The rewards will be distributed within 14 days.")}
-                      {/* This mechanism was created to reward our users and grow the GuildQB community. You can invite friends to use GuildQB together with you. Rewards will be offered to you as a thank-you present from us. More invites come with more rewards! We welcome you to help share the product with your network.  */}
+                      
                     </p>
                   </Accordion.Body>
                 </Accordion.Item>
@@ -105,7 +105,7 @@ function ReferFQ() {
                   <Accordion.Body>
                     <p className="text-white acc_text">
                       {t("You can invite as many friends as you like. However, it has to be your friend's first use of GuildQB to reach the criteria to join the 'Refer a friend' program.")}
-                      {/* This mechanism was created to reward our users and grow the GuildQB community. You can invite friends to use GuildQB together with you. Rewards will be offered to you as a thank-you present from us. More invites come with more rewards! We welcome you to help share the product with your network.  */}
+                      
                     </p>
                   </Accordion.Body>
                 </Accordion.Item>
@@ -125,7 +125,7 @@ function ReferFQ() {
                   <Accordion.Body>
                     <p className="text-white acc_text">
                       {t("The wallet you use to refer someone will be the only one that can claim the earnings from referrals. If you want to change the wallet, you have to accumulate your referrals from the start.")}
-                      {/* This mechanism was created to reward our users and grow the GuildQB community. You can invite friends to use GuildQB together with you. Rewards will be offered to you as a thank-you present from us. More invites come with more rewards! We welcome you to help share the product with your network.  */}
+                      
                     </p>
                   </Accordion.Body>
                 </Accordion.Item>
@@ -145,7 +145,7 @@ function ReferFQ() {
                   <Accordion.Body>
                     <p className="text-white acc_text">
                       {t("You can delete your account. However, keep in mind that you won’t be able to create a new account with the ETH address you’ve used once your account is deleted. Also, you won’t be able to claim rewards that use the referral link connected with this account. If you wish to delete the account, please contact us via Discord.")}
-                      {/* This mechanism was created to reward our users and grow the GuildQB community. You can invite friends to use GuildQB together with you. Rewards will be offered to you as a thank-you present from us. More invites come with more rewards! We welcome you to help share the product with your network.  */}
+                      
                     </p>
                   </Accordion.Body>
                 </Accordion.Item>
@@ -173,7 +173,7 @@ function ReferFQ() {
                        {t("- Inviting more than 5 users from the same IP address. In this case, only one referral point will be awarded.")} <br />
                        {t("2. The system may take some time to update your referral points. It may take a while for the system to process your referral and update your account.")} <br />
                       {t("3. There could be a technical issue with the referral program or your account. If this is the case, please don't hesitate to reach out to us for assistance through Feedback or Discord. It's important to provide us with your wallet address when you contact us, so we can investigate and address any issues with the system.")}
-                      {/* This mechanism was created to reward our users and grow the GuildQB community. You can invite friends to use GuildQB together with you. Rewards will be offered to you as a thank-you present from us. More invites come with more rewards! We welcome you to help share the product with your network.  */}
+                      
                     </p>
                   </Accordion.Body>
                 </Accordion.Item>
@@ -202,7 +202,7 @@ function ReferFQ() {
                        {t("Individuals who choose to share the referral link must have a clean record of adhering to the referral rules. GuildQB reserves the right to disqualify any user from the program at its discretion, resulting in the removal of their referral link and points.")} <br />
                       3. {t("Referral")} <br />
                       {t("Link Recipients Friends who successfully sign up using a valid referral link will also receive credit. Each referred friend may only use a single referral link. KEKKAI holds the authority to suspend accounts or remove referral links, leading to the deduction of KEKKAI Points.")}
-                      {/* This mechanism was created to reward our users and grow the GuildQB community. You can invite friends to use GuildQB together with you. Rewards will be offered to you as a thank-you present from us. More invites come with more rewards! We welcome you to help share the product with your network.  */}
+                      
                     </p>
                   </Accordion.Body>
                 </Accordion.Item>

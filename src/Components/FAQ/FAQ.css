@@ -79,7 +79,7 @@ letter-spacing: 0.14px;
 
 
 
-.accordion-button::after {
+/* .accordion-button::after {
     flex-shrink: 0;
     width: var(--bs-accordion-btn-icon-width);
     height: var(--bs-accordion-btn-icon-width);
@@ -89,7 +89,7 @@ letter-spacing: 0.14px;
     background-repeat: no-repeat;
     background-size: var(--bs-accordion-btn-icon-width);
     transition: var(--bs-accordion-btn-icon-transition);
-}
+} */
 
 .faq_heading{
     font-size: 18px;

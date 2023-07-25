@@ -83,7 +83,7 @@ export default function How_it_work_two() {
                   <p>
                     Invite your friends by sharing your personal referral link.
                   </p>
-                  <button className="connect_wallet_hw"> <img src={iconn} alt="" /> connect wallet</button>
+                  <button className="connect_wallet_hw"> <img src={iconn} alt="" /> Share link</button>
                 </div>
               </div>
             </div>
