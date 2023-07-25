@@ -12,9 +12,9 @@ function Tablle() {
 
     <div className="row  justify-content-center justify-content-center ">
     
-        <div className="col-3  col-md-3 col-lg-2  p-3 tableh1 test"> {t('Level')} </div>
+        <div className="col-3  col-md-3 col-lg-2  p-3 tableh1 test  tpbg"> {t('Level')} </div>
         <div className="col-3  col-md-3 col-lg-2 tableborder p-3  tableh1 tpbg">{t('Point')} </div>
-        <div className="col-5  col-lg-4 tableborder brids1 test1 p-3 tableh1 ">{t('Rewads')}</div> </div>
+        <div className="col-5  col-lg-4 tableborder brids1 test1 p-3 tableh1 tpbg">{t('Rewads')}</div> </div>
 
     <div className="row  justify-content-center">
 

@@ -9,14 +9,22 @@ background-color: #130732;
 background-position: center;
 background-repeat: no-repeat;
 background-size: cover;
-padding: 40px 0;
+padding: 40px;
+/* background-size: 100%; */
+/* padding: 40px 0px 0px 0px; */
+/* height: 897px; */
 }
+
 .work_contentt{
     background-image:url(../Assets/how_bg.png);
 background-position: center;
 background-repeat: no-repeat;
 background-size: contain;
 padding: 20px 0;
+}
+
+.bko{
+    /* margin-top: 28px !important; */
 }
 
 .work_contentt h1 {

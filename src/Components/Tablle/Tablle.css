@@ -39,7 +39,7 @@ background: var(--light-gradient, linear-gradient(135deg, #D8E8FF 0%, #EDFCFF 68
 
 
 .tpbg{
-    background-color: #EBFAFF;
+    background-color: #EBFAFF !important;
 }
 
 .tableh1{
@@ -78,8 +78,8 @@ letter-spacing: 0.44px;
 .test {
     background: transparent;
     padding: 0.5rem 1rem;
-    background-image: linear-gradient(90deg, white, white),
-      linear-gradient(90deg, hsl(289, 65%, 64%), hsl(226, 78%, 67%));
+    /* background-image: linear-gradient(90deg, white, white),
+      linear-gradient(90deg, hsl(289, 65%, 64%), hsl(226, 78%, 67%)); */
     background-clip: padding-box, border-box;
     background-origin: border-box;
     border: 1px solid transparent;
@@ -89,8 +89,8 @@ letter-spacing: 0.44px;
   .test1 {
     background: transparent;
     padding: 0.5rem 1rem;
-    background-image: linear-gradient(90deg, white, white),
-      linear-gradient(90deg, hsl(289, 65%, 64%), hsl(226, 78%, 67%));
+    /* background-image: linear-gradient(90deg, white, white),
+      linear-gradient(90deg, hsl(289, 65%, 64%), hsl(226, 78%, 67%)); */
     background-clip: padding-box, border-box;
     background-origin: border-box;
     border: 1px solid transparent;

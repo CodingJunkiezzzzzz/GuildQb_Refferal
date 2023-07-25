@@ -47,12 +47,12 @@ padding-top: 120px !important;
 
 
 
-.accordion-item:first-of-type .accordion-button {
-background-color: #231649;
+.accordion {
+background: url(../Assets/faq_bg.svg) !important;
 
 }
 .accordion-body{
-    background-color: #21163F;
+    /* background-color: #21163F; */
 
 
 

@@ -11,7 +11,7 @@ function Reward_sec() {
     <div>
       <div className="container-fluid rwd_back px-0">
         <div className="row frPad">
-          <div className="col-lg-7 col-md-7 title_upper">
+          <div className="col-lg-8 col-md-7 title_upper">
             <div className="titles_upprLayyer">
               <h1 className="main_titleLayer ">
                 {t("Refer a friend to GuildQB")} <br className="rk" />{" "}
