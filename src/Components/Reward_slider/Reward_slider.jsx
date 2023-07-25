@@ -10,6 +10,9 @@ import { Navigation, Autoplay, Pagination } from 'swiper/modules';
 import ref_picc1 from "../Assets/ref_immg1.png"
 import ref_picc2 from "../Assets/ref_immg2.png"
 import ref_picc3 from "../Assets/ref_immg3.png"
+import blur from "../Assets/blur.png"
+import blur_2 from "../Assets/blur_2.png"
+import blur_3 from "../Assets/blur_3.png"
 
 function Reward_slider() {
   return (
@@ -77,17 +80,17 @@ function Reward_slider() {
         </SwiperSlide>
         <SwiperSlide className='text-danger'>
             <div className="crtUpper">
-                <img src={ref_picc1} alt="" className="slDPicSty" />
+                <img src={blur} alt="" className="slDPicSty" />
                 </div> 
         </SwiperSlide>
         <SwiperSlide className='text-danger'>
             <div className="crtUpper">
-                <img src={ref_picc2} alt="" className="slDPicSty" />
+                <img src={blur_2} alt="" className="slDPicSty" />
                 </div> 
         </SwiperSlide>
         <SwiperSlide className='text-danger'>
             <div className="crtUpper">
-                <img src={ref_picc3} alt="" className="slDPicSty" />
+                <img src={blur_3} alt="" className="slDPicSty" />
                 </div> 
         </SwiperSlide>
         <SwiperSlide className='text-danger'>
