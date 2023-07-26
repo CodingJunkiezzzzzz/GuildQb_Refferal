@@ -42,13 +42,9 @@
 .accordion {
   background: url(../Assets/faq_bg.svg) !important;
   --bs-accordion-transition: color 0.05s ease-in-out,
-    background-color 0.15s ease-in-out,
-     border-color 0.15s ease-in-out,
+    background-color 0.15s ease-in-out, border-color 0.15s ease-in-out,
     box-shadow 0.15s ease-in-out, border-radius 0.15s ease;
-    --bs-accordion-btn-icon-transition: transform 0.1s ease-in-out;
-}
-.accordion-body {
-  /* background-color: #21163F; */
+  --bs-accordion-btn-icon-transition: transform 0.1s ease-in-out;
 }
 
 .fqhhhhh {
@@ -91,7 +87,7 @@
   transition: var(--bs-accordion-btn-icon-transition);
 }
 
-.accordion-button:not(.collapsed)::after{
+.accordion-button:not(.collapsed)::after {
   transform: rotate(-80deg) !important;
 }
 

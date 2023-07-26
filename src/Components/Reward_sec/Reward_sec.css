@@ -63,8 +63,8 @@
   border: none;
   font-family: "Murecho", sans-serif;
   display: flex;
-    justify-content: center;
-    align-items: center;
+  justify-content: center;
+  align-items: center;
 }
 
 .walletReward {
@@ -219,7 +219,6 @@
   .rk4 {
     display: none;
   }
-
 }
 
 @media (min-width: 600px) and (max-width: 768px) {
@@ -235,7 +234,6 @@
     top: -6rem;
   }
 
-  
   .gradf2 {
     display: none;
   }
@@ -286,7 +284,6 @@
 }
 
 @media (min-width: 769px) and (max-width: 820px) {
-
   .rk4 {
     display: none;
   }
@@ -303,12 +300,9 @@
     top: -6rem;
   }
 
-
   .gradf2 {
     display: none;
   }
-
-  
 
   .rk3 {
     display: block;
@@ -341,8 +335,6 @@
 }
 
 @media (min-width: 821px) and (max-width: 991px) {
-  
-
   .rwd_back {
     background-image: url(../Assets/tab_bgrwaer.png);
     background-position-x: right;
@@ -357,14 +349,6 @@
     display: flex;
     justify-content: center !important;
   }
-
-  .main_titleLayer {
-    /* width: 58%; */
-  }
-
-  .subtitle {
-    /* width: 58%; */
-  }
   .titles_upprLayyer {
     margin-left: 10px;
     margin-top: 129px;
@@ -372,7 +356,6 @@
 }
 
 @media (min-width: 992px) and (max-width: 1024px) {
-  
   .rk3 {
     display: none;
   }
@@ -384,11 +367,11 @@
     flex-direction: column !important;
     justify-content: center !important;
     align-items: center !important;
-}
+  }
 
-.exclu_subtitle {
-  width: 695px;
-}
+  .exclu_subtitle {
+    width: 695px;
+  }
   .main_titleLayer {
     font-size: 52px;
   }
@@ -437,7 +420,7 @@
 }
 
 @media screen and (max-width: 820px) {
-  .rk{
+  .rk {
     display: none;
   }
 }
@@ -471,17 +454,18 @@
 }
 
 @media (min-width: 551px) and (max-width: 950px) {
-  .main_titleLayer{
+  .main_titleLayer {
     font-size: 45px;
   }
 }
 
 @media (min-width: 1600px) and (max-width: 4500px) {
-  .slDPicSty{
+  .slDPicSty {
     width: auto !important;
   }
 }
 
-.swiper-horizontal > .swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal{
+.swiper-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal {
   display: none;
 }
