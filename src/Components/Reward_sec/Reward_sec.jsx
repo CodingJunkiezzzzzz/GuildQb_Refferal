@@ -12,7 +12,7 @@ function Reward_sec({ collection }) {
     <div>
       <div className="container-fluid rwd_back px-0">
         <div className="row frPad">
-          <div className="col-lg-8 col-md-7 title_upper">
+          <div className="col-lg-12 col-md-12 title_upper">
             <div className="titles_upprLayyer">
               <h1 className="main_titleLayer ">
                 {t("Refer a friend to GuildQB")} <br className="rk" />{" "}
@@ -25,7 +25,7 @@ function Reward_sec({ collection }) {
               </h5>
               {collection == 0 ? (
                 <>
-                  <div className="d-flex justify-content-start">
+                  <div className="earn_btn">
                     <button className="reward_but">
                       <img src={badge} className="walletReward me-2" />
                       earn rewards
@@ -34,7 +34,7 @@ function Reward_sec({ collection }) {
                 </>
               ) : (
                 <>
-                  <div className="d-flex justify-content-start">
+                  <div className="d-flex justify-content-center">
                     <button className="reward_but">
                       <FaWallet className="walletReward me-2" />
                       Connect wallet
