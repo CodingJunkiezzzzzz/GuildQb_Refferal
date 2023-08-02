@@ -15,8 +15,8 @@ function Reward_sec({ collection }) {
           <div className="col-lg-12 col-md-12 title_upper">
             <div className="titles_upprLayyer">
               <h1 className="main_titleLayer ">
-                {t("Refer a friend to GuildQB")} <br className="rk" />{" "}
-                {t("and earn rewards!")}
+                {t("Join QB Quest! Refer a")} <br className="rk" />{" "}
+                {t("friend and earn rewards!")}
               </h1>
               <h5 className="subtitle">
                 {t(
@@ -73,7 +73,7 @@ function Reward_sec({ collection }) {
         </div>
       </div>
 
-      <div className="container-fluid mobile_prt d-block d-md-none">
+      {/* <div className="container-fluid mobile_prt d-block d-md-none">
         <div className="row exclusivemainUpper  justify-content-center ">
           <div className="col-lg-7">
             <div className="exclusive_titleupper">
@@ -98,7 +98,7 @@ function Reward_sec({ collection }) {
             <Reward_slider />
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }
