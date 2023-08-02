@@ -259,7 +259,7 @@
   }
 
   .exclu_subtitle{
-    padding: 0 15px;
+    padding: 0 35px;
   }
 }
 
@@ -490,6 +490,7 @@
   .main_titleLayer {
     font-size: 40px !important;
     font-weight: 900;
+    padding: 0 29px;
   }
 }
 
@@ -497,6 +498,7 @@
   .main_titleLayer {
     font-size: 43px !important;
     font-weight: 900;
+    padding: 0 11px;
   }
 }
 
@@ -504,8 +506,10 @@
   .main_titleLayer {
     font-size: 45px !important;
     font-weight: 900;
+    padding: 0 31px;
   }
 }
+
 
 @media (min-width: 551px) and (max-width: 950px) {
   .main_titleLayer {

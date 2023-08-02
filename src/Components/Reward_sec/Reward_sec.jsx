@@ -15,7 +15,7 @@ function Reward_sec({ collection }) {
           <div className="col-lg-12 col-md-12 title_upper">
             <div className="titles_upprLayyer">
               <h1 className="main_titleLayer ">
-                {t("Join QB Quest! Refer a")} <br className="rk" />{" "}
+                {t("Join QB Quest! ")}{t("Refer a")} <br className="rk" />
                 {t("friend and earn rewards!")}
               </h1>
               <h5 className="subtitle">
@@ -55,8 +55,11 @@ function Reward_sec({ collection }) {
               </h1>
               <h5 className="exclu_subtitle">
                 {t(
-                  "Earn 1 point for every friend who installs GuildQB and your friend will get 1"
-                )}{" "}
+                  "Earn 1 point for every friend who installs"
+                )}<br/>
+                {t(
+                  " GuildQB and your friend will get 1"
+                )}
                 <br className="rk3" /> {t("point too. Get different")}
                 <br className="rk4" /> {t("kinds of rewards with your points.")}
               </h5>
