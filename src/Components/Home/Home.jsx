@@ -9,10 +9,10 @@ import Already_ref from "../Already_ref/Already_ref";
 import ReferFQ from "../ReferFQ/ReferFQ";
 import Footer from "../Footer/Footer";
 
-const Home = ({ collection }) => {
+const Home = ({ collection, langValue }) => {
   return (
     <div>
-      <Reward_sec collection={collection} />
+      <Reward_sec langValue={langValue} collection={collection} />
       <Tablle />
       {collection == 0 ? (
         <>

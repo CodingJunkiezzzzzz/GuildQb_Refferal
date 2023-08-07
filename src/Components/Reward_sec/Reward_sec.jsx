@@ -6,7 +6,7 @@ import Reward_slider from "../Reward_slider/Reward_slider";
 import { useTranslation } from "react-i18next";
 import badge from "../Assets/reward.svg";
 
-function Reward_sec({ collection }) {
+function Reward_sec({ collection, langValue }) {
   const { t } = useTranslation();
   return (
     <div>
@@ -50,13 +50,14 @@ function Reward_sec({ collection }) {
           <div className="col-lg-7">
             <div className="exclusive_titleupper">
               <h1 className="exclusive_title">
-                {t("Win GuildQB Exclusive")} <br />{" "}
-                {t("Rewards for Referrals!")}
+                {t("Get exclusive GuildQB ")}<br className="guildmob"/>{t("rewards for")} <br className="refVala"/>{" "}
+                {t("referrals!")}
               </h1>
               <h5 className="exclu_subtitle">
                 {t(
                   "Earn 1 point for every friend who installs"
-                )}<br/>
+                )}
+                {langValue == 'jp' ? <br /> : ''}
                 {t(
                   " GuildQB and your friend will get 1"
                 )}

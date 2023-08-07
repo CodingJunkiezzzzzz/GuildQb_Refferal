@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Header.css";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
@@ -10,15 +10,11 @@ import qb_mobl_logo from "../Assets/mobile_logo.png";
 import pt_logo from "../Assets/pt_logomain.png";
 import twi_logo from "../Assets/twi.png";
 import discord_logo from "../Assets/discord.png";
-import i18next from "i18next";
 import { Select, Space } from "antd";
 import { Link } from "react-router-dom";
 
-function Header({ handleButtonClick }, props) {
-  const handleChange = (value) => {
-    console.log(`selected ${value}`);
-    i18next.changeLanguage(value);
-  };
+function Header({ handleButtonClick, handleChange }, props) {
+  
 
   return (
     <div className="">
@@ -71,9 +67,10 @@ function Header({ handleButtonClick }, props) {
 
               <Nav className="d-flex align-items-center">
                 <Nav.Link href="" className="sltUpper">
-                  <Space wrap className="">
+                  <Space wrap className="kop">
+                    
                     <Select
-                      className="kop "
+                      className=""
                       defaultValue="English"
                       onChange={handleChange}
                       options={[

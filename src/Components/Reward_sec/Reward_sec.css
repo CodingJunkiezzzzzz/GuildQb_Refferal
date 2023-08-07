@@ -1,8 +1,8 @@
 .rwd_back {
-  background-image: url(../Assets/1440.png);
-  background-position: right top, left top;
+  background-image: url(../Assets/QBQuest.png);
+  /* background-position: cover; */
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
   position: relative;
   /* z-index: -1; */
   background-color: #130732;
@@ -24,7 +24,7 @@
   letter-spacing: 1.16px;
   margin-bottom: 0px;
   text-align: start;
-  margin-top: 40px;
+  margin-top: 80px;
   background: linear-gradient(133deg, #fff 0%, #b8dfff 51.04%, #ffd8fb 100%);
   background-clip: text;
   -webkit-background-clip: text;
@@ -45,7 +45,7 @@
 }
 
 .title_upper {
-  margin-top: 60px;
+  margin-top: 80px;
   margin-bottom: 60px;
   /* display: flex;
   justify-content: center;
@@ -68,7 +68,7 @@
   line-height: 150%;
   letter-spacing: 0.14px;
   text-transform: uppercase;
-  border-radius: 32px;
+  border-radius: 20px;
   background: var(
     --gradient-1,
     linear-gradient(119deg, #8217f4 19.01%, #00d1ff 100%)
@@ -89,11 +89,11 @@
 /* -------------------------exclusive style -------------------- */
 
 .exclusivemainUpper {
-  margin-top: 109px;
+  margin-top: 249px;
 }
 
 .exclusive_titleupper {
-  padding: 35px 0px;
+  padding: 105px 0px;
 }
 
 .exclusive_title {
@@ -126,6 +126,7 @@
 
 .frPad {
   padding-top: 5rem;
+  /* height: 100vh; */
 }
 
 .mobile_prt {
@@ -171,6 +172,10 @@
   position: relative;
 }
 
+.guildmob{
+  display: none;
+}
+
 @media only screen and (max-width: 600px) {
   .gradf {
     border-radius: 587px;
@@ -182,6 +187,14 @@
     position: absolute;
     left: -17rem;
     top: -7rem;
+  }
+
+  .refVala{
+    display: none;
+  }
+
+  .guildmob{
+    display: block;
   }
 
   .moblBackpurp {
@@ -206,6 +219,10 @@
   background: linear-gradient(180deg, rgba(19,7,50,1) 0%, rgba(25,8,54,1) 90%);
 
   }
+
+  .exclusive_titleupper{
+    padding: 100px 0;
+  }
   
   /* .exclusive_titleupper{
     position: relative;
@@ -219,10 +236,15 @@
   } */
 
   .rwd_back {
-    background-image: url(../Assets/375.png);
+    background-image: url(../Assets/QBQuestmob.png);
     /* background-position: center;
     background-repeat: no-repeat; */
-    background-size: contain;
+    background-size: cover;
+  }
+
+  .NavUpperMain{
+    height: 75px;
+    padding: 0;
   }
 
   .title_upper {
@@ -234,7 +256,7 @@
   }
 
   .reward_but {
-    /* width: 100%; */
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -304,6 +326,14 @@
     top: -6rem;
   }
 
+  .refVala{
+    display: none;
+  }
+
+  .guildmob{
+    display: block;
+  }
+
   .gradf2 {
     display: none;
   }
@@ -324,7 +354,7 @@
     /* background-image: url(../Assets/tab_bgrwaer.png); */
     /* background-position: inherit; */
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
   }
 
   /* .reward_but {
@@ -378,6 +408,14 @@
     display: block;
   }
 
+  .refVala{
+    display: none;
+  }
+
+  .guildmob{
+    display: block;
+  }
+
   /* .frPad {
     padding-top: 0rem;
     padding-top: 100px;
@@ -411,6 +449,14 @@
     background-repeat: no-repeat;
     background-size: cover;
   } */
+
+  .refVala{
+    display: none;
+  }
+
+  .guildmob{
+    display: block;
+  }
 
   .title_upper {
     margin-top: 12px;
@@ -548,4 +594,14 @@
   .rwd_back{
     background-size: cover;
   }
+}
+
+@media (min-width: 1600px) and (max-width: 5000px) {
+  .exclusivemainUpper {
+    margin-top: 30rem;
+}
+
+.title_upper {
+  margin-top: 308px;
+}
 }

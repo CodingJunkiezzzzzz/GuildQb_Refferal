@@ -9,16 +9,16 @@
 }
 
 .NavUpperMain {
-  border-radius: 0px 0px 33px 33px;
+  border-radius: 0px 0px 40px 40px;
   background: rgba(18, 7, 49, 0.47);
   backdrop-filter: blur(10px) !important;
-  border-bottom: 2px solid transparent;
-  background-image: linear-gradient(90deg, #19171f, #130737),
-    linear-gradient(90deg, hsl(289, 65%, 64%), hsl(226, 78%, 67%));
+  border-bottom: 2px solid hsl(226, 78%, 67%);
+  /* border-image: linear-gradient(90deg, hsl(289, 65%, 64%), hsl(226, 78%, 67%)); */
   background-clip: padding-box, border-box;
   background-origin: border-box;
   position: absolute;
   z-index: 1;
+  height: 100px;
   width: 100%;
 }
 
@@ -181,6 +181,12 @@
   cursor: pointer !important;
 }
 
+.ant-select{
+  position: relative;
+  z-index: 99999 !important;
+}
+
+
 .form-select {
   background-image: url(../Assets/white-down.jpg) !important;
 }
@@ -226,8 +232,17 @@
     display: none;
   }
 
+  .navbar-collapse{
+    background: #1e0a49;
+    border-radius: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
   .qbMobil {
     display: block;
+    width: 56px;
+    height: 56px;
   }
 
   .walletConnect2 {
@@ -253,6 +268,13 @@
 @media (min-width: 600px) and (max-width: 768px) {
   .qbmain {
     display: block;
+  }
+
+  .navbar-collapse{
+    background: #1e0a49;
+    border-radius: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
   }
 
   .qbMobil {
@@ -302,6 +324,13 @@
     margin-left: 0px;
   }
 
+  .navbar-collapse{
+    background: #1e0a49;
+    border-radius: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
   /* .mg{
     display: none;
   } */
@@ -313,6 +342,13 @@
   }
   .qbMobil {
     display: none;
+  }
+
+  .navbar-collapse{
+    background: #1e0a49;
+    border-radius: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
   }
 
   .walletConnect2 {

@@ -13,6 +13,9 @@ import ref_picc3 from "../Assets/ref_immg3.png"
 import blur from "../Assets/blur.png"
 import blur_2 from "../Assets/blur_2.png"
 import blur_3 from "../Assets/blur_3.png"
+import blur_7 from "../Assets/blur_7.png"
+import blur_8 from "../Assets/blur_8.png"
+import blur_9 from "../Assets/blur_9.png"
 
 function Reward_slider() {
   return (
@@ -94,23 +97,18 @@ function Reward_slider() {
                 </div> 
         </SwiperSlide>
         <SwiperSlide className='text-danger'>
-            <div className="crtUpper">
-                <img src={ref_picc1} alt="" className="slDPicSty" />
+            <div className="crtUpper_t">
+                <img src={blur_7} alt="" className="slDPicSty_t" />
                 </div> 
         </SwiperSlide>
         <SwiperSlide className='text-danger'>
-            <div className="crtUpper">
-                <img src={ref_picc2} alt="" className="slDPicSty" />
+            <div className="crtUpper_t">
+                <img src={blur_8} alt="" className="slDPicSty_t" />
                 </div> 
         </SwiperSlide>
         <SwiperSlide className='text-danger'>
-            <div className="crtUpper">
-                <img src={ref_picc3} alt="" className="slDPicSty" />
-                </div> 
-        </SwiperSlide>
-        <SwiperSlide className='text-danger'>
-            <div className="crtUpper">
-                <img src={ref_picc3} alt="" className="slDPicSty" />
+            <div className="crtUpper_t">
+                <img src={blur_9} alt="" className="slDPicSty_t" />
                 </div> 
         </SwiperSlide>
       </Swiper>

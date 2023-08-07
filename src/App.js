@@ -16,9 +16,18 @@ import { useState } from "react";
 import Header_two from "./Components/Header_two/Header_two";
 import Home from "./Components/Home/Home";
 import { Route, Routes } from "react-router-dom";
+import i18next from "i18next";
+
 
 function App() {
   const [collection, setcollection] = useState();
+
+  const [langValue, setlangValue] = useState('')
+  const handleChange = (value) => {
+    console.log(`selected ${value}`);
+    setlangValue(value)
+    i18next.changeLanguage(value);
+  };
 
   const handleButtonClick = (newData) => {
     setcollection(newData);
@@ -26,8 +35,8 @@ function App() {
 
   return (
     <div className="App">
-      {collection == 0 ? (<><Header_two /></>) : (<><Header handleButtonClick={handleButtonClick}/></>)}
-      <Home collection={collection}/>
+      {collection == 0 ? (<><Header_two /></>) : (<><Header handleChange={handleChange} handleButtonClick={handleButtonClick}/></>)}
+      <Home langValue={langValue} collection={collection}/>
       <Footer />
     </div>
   );
