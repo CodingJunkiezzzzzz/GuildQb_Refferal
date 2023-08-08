@@ -4,9 +4,17 @@ import icon from "../Assets/wallet_icon.svg";
 import discord from "../Assets/discord.svg";
 import twi from "../Assets/twitter.svg";
 import { useTranslation } from "react-i18next";
+import { useBalance, useAccount, useNetwork, useSwitchNetwork } from "wagmi";
+import { useWeb3Modal } from "@web3modal/react";
 
 export default function How_it_work() {
   const { t } = useTranslation();
+
+  const { open, close } = useWeb3Modal();
+  const { address } = useAccount();
+  const { chain } = useNetwork();
+  const { chains, switchNetwork } = useSwitchNetwork();
+
   return (
     <div className="main_how_work">
       <h1 className="work_content_h1">How it works?</h1>
@@ -23,10 +31,70 @@ export default function How_it_work() {
                       "Go to the Refer a Friend page and connect your wallet."
                     )}
                   </p>
-                  <button className="connect_wallet_hw">
+                  {chain?.id == chains[0]?.id ? (
+                  address ? (
+                    <>
+                      {/* <div className="earn_btn">
+                    <button className="reward_but">
+                      <img src={badge} className="walletReward me-2" />
+                      earn rewards
+                    </button>
+                  </div> */}
+                    </>
+                  ) : (
+                    <>
+                    {/* <div className="d-flex justify-content-center"> */}
+                    {/* <button className="reward_but" onClick={() =>
+                        chain?.id == chains[0]?.id
+                          ? open()
+                          : switchNetwork?.(chains[0]?.id)
+                      }> */}
+                      <button className="connect_wallet_hw" onClick={() =>
+                        chain?.id == chains[0]?.id
+                          ? open()
+                          : switchNetwork?.(chains[0]?.id)
+                      }>
                     {" "}
                     <img src={icon} alt="" /> connect wallet
                   </button>
+                    {/* </button> */}
+                  {/* </div> */}
+                    </>
+                  )
+                ) : (
+                  <>
+                  <div className="d-flex justify-content-center">
+                    <button className="reward_but" onClick={() =>
+                        chain?.id == chains[0]?.id
+                          ? open()
+                          : switchNetwork?.(chains[0]?.id)
+                      }>
+                      {/* <FaWallet className="walletReward me-2" /> */}
+                      {chain?.id == chains[0]?.id ? (
+                        address ? (
+                          <>
+                            {`${address.substring(0, 6)}...${address.substring(
+                              address.length - 4
+                            )}`}{" "}
+                          </>
+                        ) : (
+                          <>
+                          <div className="d-flex justify-content-center">
+                    <button className="reward_but">
+                      {/* <FaWallet className="walletReward me-2" /> */}
+                      Connect wallet
+                    </button>
+                  </div>
+                          </>
+                        )
+                      ) : (
+                        "Switch NetWork"
+                      )}
+                    </button>
+                  </div>
+                  </>
+                )}
+                  
                 </div>
               </div>
             </div>

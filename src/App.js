@@ -17,9 +17,12 @@ import Header_two from "./Components/Header_two/Header_two";
 import Home from "./Components/Home/Home";
 import { Route, Routes } from "react-router-dom";
 import i18next from "i18next";
+import { useWeb3Modal } from '@web3modal/react';
+import { useAccount } from "wagmi";
 
 
 function App() {
+  const { address } = useAccount();
   const [collection, setcollection] = useState();
 
   const [langValue, setlangValue] = useState('')
@@ -35,8 +38,13 @@ function App() {
 
   return (
     <div className="App">
-      {collection == 0 ? (<><Header_two /></>) : (<><Header handleChange={handleChange} handleButtonClick={handleButtonClick}/></>)}
-      <Home langValue={langValue} collection={collection}/>
+      {/* {collection == 0 ? (<><Header_two /></>) : (<><Header handleChange={handleChange} handleButtonClick={handleButtonClick}/></>)} */}
+      <Header />
+      <Routes>
+        <Route path="/" element={<Home langValue={langValue} collection={collection}/>} />
+        <Route path="/Refferal_main" element={<Reffereal_main />} />
+       </Routes>
+      
       <Footer />
     </div>
   );

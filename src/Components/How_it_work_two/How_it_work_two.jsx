@@ -5,9 +5,13 @@ import discord from "../Assets/discord.svg";
 import twi from "../Assets/twitter.svg";
 import iconn from "../Assets/link.svg";
 import { useTranslation } from "react-i18next";
+import { useAccount } from "wagmi";
+import { Link } from "react-router-dom";
 
 export default function How_it_work_two() {
   const { t } = useTranslation();
+
+  const { address } = useAccount();
 
   return (
     <div className="main_how_work">
@@ -27,7 +31,10 @@ export default function How_it_work_two() {
                   </p>
                   <button className="conecctedWalte">
                     {" "}
-                    46504932bcc...6955 <img src={icon} alt="" />
+                    {`${address.substring(0, 6)}...${address.substring(
+                      address.length - 4
+                    )}`}{" "}
+                    <img src={icon} alt="" />
                   </button>
                 </div>
               </div>
@@ -108,10 +115,13 @@ export default function How_it_work_two() {
                       "Invite your friends by sharing your personal referral link."
                     )}
                   </p>
-                  <button className="connect_wallet_hw">
+                  <Link className="text-decoration-none" to="/Refferal_main">
                     {" "}
-                    <img src={iconn} alt="" /> Share link
-                  </button>
+                    <button className="connect_wallet_hw">
+                      {" "}
+                      <img src={iconn} alt="" /> Share link
+                    </button>
+                  </Link>
                 </div>
               </div>
             </div>

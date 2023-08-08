@@ -8,13 +8,16 @@ import How_it_work from "../How_it_work/How_it_work";
 import Already_ref from "../Already_ref/Already_ref";
 import ReferFQ from "../ReferFQ/ReferFQ";
 import Footer from "../Footer/Footer";
+import { useAccount } from "wagmi";
 
 const Home = ({ collection, langValue }) => {
+  const { address } = useAccount();
+
   return (
     <div>
       <Reward_sec langValue={langValue} collection={collection} />
       <Tablle />
-      {collection == 0 ? (
+      {address ? (
         <>
           <How_it_work_two />
         </>

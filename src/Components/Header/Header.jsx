@@ -12,9 +12,14 @@ import twi_logo from "../Assets/twi.png";
 import discord_logo from "../Assets/discord.png";
 import { Select, Space } from "antd";
 import { Link } from "react-router-dom";
+import { useWeb3Modal } from "@web3modal/react";
+import { useBalance, useAccount, useNetwork, useSwitchNetwork } from "wagmi";
 
 function Header({ handleButtonClick, handleChange }, props) {
-  
+  const { open, close } = useWeb3Modal();
+  const { address } = useAccount();
+  const { chain } = useNetwork();
+  const { chains, switchNetwork } = useSwitchNetwork();
 
   return (
     <div className="">
@@ -23,20 +28,31 @@ function Header({ handleButtonClick, handleChange }, props) {
           <Container className="nav_ka_contai">
             <Navbar.Brand className="text-white" href="#home">
               <Link to="/">
-              <div>
-                <img src={qb_logo} alt="#" className="qbmain" />
-                <img src={qb_mobl_logo} alt="#" className="qbMobil" />
-              </div>
+                <div>
+                  <img src={qb_logo} alt="#" className="qbmain" />
+                  <img src={qb_mobl_logo} alt="#" className="qbMobil" />
+                </div>
               </Link>
             </Navbar.Brand>
             <div className="d-flex gap-3">
               <Nav.Link
                 className="walletConnect2"
                 href="#"
-                onClick={() => handleButtonClick(0)}
+                onClick={() => open()}
               >
-                <FaWallet className="wallet" />
+                {address ? (
+                  <><FaWallet className="wallet" /> 
+                  {`${address.substring(0, 6)}...${address.substring(
+                          address.length - 4
+                        )}`}
+                  </>
+                ) : (
+                  <>
+                  <FaWallet className="wallet" />
                 Connect
+                  </>
+                )}
+                
               </Nav.Link>
               <Navbar.Toggle
                 aria-controls="responsive-navbar-nav"
@@ -51,9 +67,9 @@ function Header({ handleButtonClick, handleChange }, props) {
                 <Nav.Link className="MainLink" href="#">
                   Token
                 </Nav.Link>
-                  <Nav.Link className="MainLink" href="#">
-                    Quest
-                  </Nav.Link>
+                <Nav.Link className="MainLink" href="#">
+                  Quest
+                </Nav.Link>
                 <Nav.Link className="MainLink" href="#">
                   OharaiNFT
                 </Nav.Link>
@@ -68,7 +84,6 @@ function Header({ handleButtonClick, handleChange }, props) {
               <Nav className="d-flex align-items-center">
                 <Nav.Link href="" className="sltUpper">
                   <Space wrap className="kop">
-                    
                     <Select
                       className=""
                       defaultValue="English"
@@ -90,15 +105,69 @@ function Header({ handleButtonClick, handleChange }, props) {
                     <option href="#" className="optionsLnk" value={'jp'}>Japanese</option>
                   </Form.Select> */}
                 </Nav.Link>
-                <Nav.Link
-                  className="walletConnect"
-                  href="#"
-                  onClick={() => handleButtonClick(0)}
-                  // className={collection == 0 ? "active" : "non_active"}
-                >
-                  <FaWallet className="wallet" />
-                  Connect wallet
-                </Nav.Link>
+                {chain?.id == chains[0]?.id ? (
+                  address ? (
+                    <>
+                      {/* {`${address.substring(0, 6)}...${address.substring(
+                          address.length - 4
+                        )}`}{" "} */}
+                      <Nav.Link className="ptbX mg" href="">
+                        <img src={pt_logo} alt="#" className="ptimgg" />0 pt
+                      </Nav.Link>
+
+                      <Nav.Link className="ms-2 mg" href="">
+                        <div className="d-flex align-items-center gap-3">
+                          <img src={discord_logo} alt="" className="twi" />
+                          <img src={twi_logo} alt="" className="twi" />
+                        </div>
+                      </Nav.Link>
+                    </>
+                  ) : (
+                    <>
+                     <Nav.Link
+                      className="walletConnect"
+                      href="#"
+                      onClick={() =>
+                        chain?.id == chains[0]?.id
+                          ? open()
+                          : switchNetwork?.(chains[0]?.id)
+                      }
+                      // className={collection == 0 ? "active" : "non_active"}
+                    >
+                      <FaWallet className="wallet" />
+                      Connect Wallet
+                    </Nav.Link>
+                    </>
+                  )
+                ) : (
+                  <>
+                    <Nav.Link
+                      className="walletConnect"
+                      href="#"
+                      onClick={() =>
+                        chain?.id == chains[0]?.id
+                          ? open()
+                          : switchNetwork?.(chains[0]?.id)
+                      }
+                      // className={collection == 0 ? "active" : "non_active"}
+                    >
+                      <FaWallet className="wallet" />
+                      {chain?.id == chains[0]?.id ? (
+                        address ? (
+                          <>
+                            {`${address.substring(0, 6)}...${address.substring(
+                              address.length - 4
+                            )}`}{" "}
+                          </>
+                        ) : (
+                          "Connect wallet"
+                        )
+                      ) : (
+                        "Switch NetWork"
+                      )}
+                    </Nav.Link>
+                  </>
+                )}
               </Nav>
             </Navbar.Collapse>
           </Container>

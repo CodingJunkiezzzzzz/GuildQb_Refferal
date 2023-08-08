@@ -5,9 +5,17 @@ import Header from "../Header/Header";
 import Reward_slider from "../Reward_slider/Reward_slider";
 import { useTranslation } from "react-i18next";
 import badge from "../Assets/reward.svg";
+import { useBalance, useAccount, useNetwork, useSwitchNetwork } from "wagmi";
+import { useWeb3Modal } from "@web3modal/react";
 
 function Reward_sec({ collection, langValue }) {
   const { t } = useTranslation();
+
+  const { open, close } = useWeb3Modal();
+  const { address } = useAccount();
+  const { chain } = useNetwork();
+  const { chains, switchNetwork } = useSwitchNetwork();
+
   return (
     <div>
       <div className="container-fluid rwd_back px-0">
@@ -23,7 +31,64 @@ function Reward_sec({ collection, langValue }) {
                   "You’ll both earn Discord Supporter Role! And more for you to explore."
                 )}
               </h5>
-              {collection == 0 ? (
+              {chain?.id == chains[0]?.id ? (
+                  address ? (
+                    <>
+                      <div className="earn_btn">
+                    <button className="reward_but">
+                      <img src={badge} className="walletReward me-2" />
+                      earn rewards
+                    </button>
+                  </div>
+                    </>
+                  ) : (
+                    <>
+                    <div className="d-flex justify-content-center">
+                    <button className="reward_but" onClick={() =>
+                        chain?.id == chains[0]?.id
+                          ? open()
+                          : switchNetwork?.(chains[0]?.id)
+                      }>
+                      <FaWallet className="walletReward me-2" />
+                      Connect wallet
+                    </button>
+                  </div>
+                    </>
+                  )
+                ) : (
+                  <>
+                  <div className="d-flex justify-content-center">
+                    <button className="reward_but" onClick={() =>
+                        chain?.id == chains[0]?.id
+                          ? open()
+                          : switchNetwork?.(chains[0]?.id)
+                      }>
+                      <FaWallet className="walletReward me-2" />
+                      {chain?.id == chains[0]?.id ? (
+                        address ? (
+                          <>
+                            {`${address.substring(0, 6)}...${address.substring(
+                              address.length - 4
+                            )}`}{" "}
+                          </>
+                        ) : (
+                          <>
+                          <div className="d-flex justify-content-center">
+                    <button className="reward_but">
+                      <FaWallet className="walletReward me-2" />
+                      Connect wallet
+                    </button>
+                  </div>
+                          </>
+                        )
+                      ) : (
+                        "Switch NetWork"
+                      )}
+                    </button>
+                  </div>
+                  </>
+                )}
+              {/* {collection == 0 ? (
                 <>
                   <div className="earn_btn">
                     <button className="reward_but">
@@ -41,7 +106,7 @@ function Reward_sec({ collection, langValue }) {
                     </button>
                   </div>
                 </>
-              )}
+              )} */}
             </div>
           </div>
         </div>

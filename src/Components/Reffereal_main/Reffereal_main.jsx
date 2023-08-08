@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./Reffereal_main.css";
 import copy from "../Assets/copy_icon.svg";
 import twiter from "../Assets/soic_twi.svg";
@@ -6,11 +6,41 @@ import fb from "../Assets/fb.svg";
 import award from "../Assets/award.svg";
 import Refferal_modal from "../Refferal_modal/Refferal_modal";
 import SelectRewards from "../SelectRewards/SelectRewards";
+import { Link } from "react-router-dom";
+import { useAccount } from "wagmi";
+import CopyToClipboard from "react-copy-to-clipboard";
 
 
 export default function Reffereal_main() {
   const [modalShow, setModalShow] = React.useState(false);
   const [modalShoww, setModalShoww] = React.useState(false);
+
+  const [refAddress, setRefAddress] = useState("");
+  const [copied, setCopied] = useState(false);
+
+  const { address } = useAccount();
+  let history = window.location;
+
+  console.log("history", history);
+
+  useEffect(() => {
+    if (address) {
+      setRefAddress(`${history.href}?ref=${address}`);
+    } else {
+      setRefAddress("Connect wallet");
+    }
+
+    if (address) {
+     console.log("refAddress", history.href);
+    } else {
+      console.log("Not Refferal")
+    }
+
+    setInterval(() => {
+      setCopied(false);
+    }, 3000);
+  }, [address, copied]);
+
 
   return (
     <div className="Refferal_main_page " id="Refferal">
@@ -18,9 +48,9 @@ export default function Reffereal_main() {
         <nav aria-label="breadcrumb">
           <ol class="breadcrumb">
             <li class="breadcrumb-item">
-              <a className="quest_ref text-decoration-none    " href="#">
+             <Link className="text-decoration-none" to="/"> <a className="quest_ref text-decoration-none    " href="#">
                 Home
-              </a>
+              </a></Link>
             </li>
             <li class="breadcrumb-item  " aria-current="page">
               <a className="quest_ref text-decoration-none ref_ref  " href="#">
@@ -40,25 +70,29 @@ export default function Reffereal_main() {
           </div>
           <div className="col-lg-7 px-0">
             <div className="ref_right_cont text-start">
-              <div className="fsfsww2"></div>
+              {/* <div className="fsfsww2"></div> */}
               <p>Your referral link</p>
               <div className="d-flex ref_copy_main">
                 <input
                   type="text"
-                  className="copy_inp text-truncate "
+                  className="copy_inp text-white text-truncate "
                   placeholder="https://guildqb.com/invitation/46504932bcc5526955"
                   name=""
                   id=""
-                  onClick={() => setModalShow(true)}
+                  value={refAddress}
+                  // onClick={() => setModalShow(false)}
                 />
-                <button className="ref_copy d-none d-md-flex">
-                  {" "}
-                  <img src={copy} alt="" /> <p className="copy_text">copy</p>
+                <CopyToClipboard text={refAddress} onCopy={() => setCopied(true)}>
+                <button className="ref_copy d-md-flex">
+                  <img src={copy} alt="" /> 
+                  <p className="copy_text">{copied ? "COPIED" : "COPY"}</p>
                 </button>
-                <button className="ref_copy  d-flex d-md-none">
+                {/* <button className="ref_copy  d-flex d-md-none">
                   {" "}
                   <img src={copy} alt="" />
-                </button>
+                </button> */}
+              </CopyToClipboard>
+                
                 <Refferal_modal
                   show={modalShow}
                   onHide={() => setModalShow(false)}

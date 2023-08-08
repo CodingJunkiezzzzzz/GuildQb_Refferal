@@ -356,7 +356,11 @@
   }
 
   .ref_copy {
-    padding: 20px !important;
+    padding: 10px !important;
+  }
+
+  .ref_right_cont p {
+    font-size: 16px;
   }
 
   .copy_inp {
