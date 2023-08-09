@@ -1,17 +1,22 @@
 import React from "react";
 import "./How_it_work.css";
 import icon from "../Assets/green.svg";
+import Wallet from "../Assets/wallet_icon.svg";
 import discord from "../Assets/discord.svg";
 import twi from "../Assets/twitter.svg";
 import iconn from "../Assets/link.svg";
 import { useTranslation } from "react-i18next";
-import { useAccount } from "wagmi";
+import { useAccount, useNetwork, useSwitchNetwork } from "wagmi";
 import { Link } from "react-router-dom";
+import { useWeb3Modal } from "@web3modal/react";
 
-export default function How_it_work_two() {
+export default function How_it_work_two({Add_Follower}) {
   const { t } = useTranslation();
+  const { open, close } = useWeb3Modal();
 
   const { address } = useAccount();
+  const { chain } = useNetwork();
+  const { chains, switchNetwork } = useSwitchNetwork();
 
   return (
     <div className="main_how_work">
@@ -29,13 +34,26 @@ export default function How_it_work_two() {
                       "Go to the Refer a Friend page and connect your wallet."
                     )}
                   </p>
-                  <button className="conecctedWalte">
-                    {" "}
-                    {`${address.substring(0, 6)}...${address.substring(
-                      address.length - 4
-                    )}`}{" "}
-                    <img src={icon} alt="" />
-                  </button>
+                  {address?.startsWith("0x") ? (
+                    <button className="conecctedWalte">
+                      {`${address?.substring(0, 6)}...${address?.substring(
+                        address?.length - 4
+                      )}`}{" "}
+                      <img src={icon} alt="" />
+                    </button>
+                  ) : (
+                    <button
+                      className="connect_wallet_hw"
+                      onClick={() =>
+                        chain?.id == chains[0]?.id
+                          ? open()
+                          : switchNetwork?.(chains[0]?.id)
+                      }
+                    >
+                      {" "}
+                      <img src={Wallet} alt="" /> connect wallet
+                    </button>
+                  )}
                 </div>
               </div>
             </div>
@@ -48,7 +66,7 @@ export default function How_it_work_two() {
                     <a
                       className="text-decoration-underline text-white"
                       href="https://twitter.com/GuildQB"
-                      target="_blank"
+                     onClick={()=>Add_Follower("twitter")}
                     >
                       {" "}
                       {t("GuildQB's official")} {t("Twitter")}{" "}
@@ -59,7 +77,7 @@ export default function How_it_work_two() {
                     <a
                       className="text-decoration-underline text-white"
                       href="https://twitter.com/guildqb/status/1680093793956270080?s=46&t=uvRkGhFIpkzzPVj8jAkdig"
-                      target="_blank"
+                     onClick={()=>Add_Follower("post")}
                     >
                       {" "}
                       {t("designated post")}{" "}
@@ -70,7 +88,7 @@ export default function How_it_work_two() {
                     <a
                       className="text-decoration-underline text-white"
                       href="https://discord.com/invite/BNjFBTgpMt"
-                      target="_blank"
+                     onClick={()=>Add_Follower("discord")}
                     >
                       {" "}
                       {t("official GuildQB Discord")}{" "}
@@ -79,7 +97,7 @@ export default function How_it_work_two() {
                   <div className="two_btn flex-column flex-md-row d-flex gap-4">
                     <a
                       href="https://discord.com/invite/BNjFBTgpMt"
-                      target="_blank"
+                     onClick={()=>Add_Follower("discord")}
                       className="text-decoration-none text-white"
                     >
                       <button className="dis_btn">
@@ -90,7 +108,7 @@ export default function How_it_work_two() {
                     </a>
                     <a
                       href="https://twitter.com/GuildQB"
-                      target="_blank"
+                     onClick={()=>Add_Follower("twitter")}
                       className="text-decoration-none text-white"
                     >
                       <button className="dis_btn">
@@ -115,13 +133,20 @@ export default function How_it_work_two() {
                       "Invite your friends by sharing your personal referral link."
                     )}
                   </p>
-                  <Link className="text-decoration-none" to="/Refferal_main">
-                    {" "}
-                    <button className="connect_wallet_hw">
-                      {" "}
-                      <img src={iconn} alt="" /> Share link
-                    </button>
-                  </Link>
+                  {address?.startsWith("0x") && (
+                    <>
+                      <Link
+                        className="text-decoration-none"
+                        to="/Refferal_main"
+                      >
+                        {" "}
+                        <button className="connect_wallet_hw">
+                          {" "}
+                          <img src={iconn} alt="" /> Share link
+                        </button>
+                      </Link>
+                    </>
+                  )}
                 </div>
               </div>
             </div>

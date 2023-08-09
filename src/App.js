@@ -12,22 +12,24 @@ import Tablle from "./Components/Tablle/Tablle";
 import Already_ref from "./Components/Already_ref/Already_ref";
 // import MyVerticallyCenteredModal from './Components/MyVerticallyCenteredModal/MyVerticallyCenteredModal';
 import SelectRewards from "./Components/SelectRewards/SelectRewards";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Header_two from "./Components/Header_two/Header_two";
 import Home from "./Components/Home/Home";
 import { Route, Routes } from "react-router-dom";
 import i18next from "i18next";
 import { useWeb3Modal } from '@web3modal/react';
 import { useAccount } from "wagmi";
+import axios from "axios";
 
 
 function App() {
   const { address } = useAccount();
   const [collection, setcollection] = useState();
+  const [user_Points, setUser_Points] = useState(0)
 
   const [langValue, setlangValue] = useState('')
   const handleChange = (value) => {
-    console.log(`selected ${value}`);
+
     setlangValue(value)
     i18next.changeLanguage(value);
   };
@@ -36,13 +38,29 @@ function App() {
     setcollection(newData);
   };
 
+  const User_Points=async()=>{
+    try {
+      let res=await axios.get(`https://betterlogic-audit.betterlogics.tech/get_Ponits?UserAddress=${address}`)
+    
+      setUser_Points(res.data.data[0].Point)
+      
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
+  useEffect(()=>{
+    User_Points()
+  },[])
+
   return (
     <div className="App">
-      {/* {collection == 0 ? (<><Header_two /></>) : (<><Header handleChange={handleChange} handleButtonClick={handleButtonClick}/></>)} */}
-      <Header />
+      <Header user_Points={user_Points} />
       <Routes>
         <Route path="/" element={<Home langValue={langValue} collection={collection}/>} />
-        <Route path="/Refferal_main" element={<Reffereal_main />} />
+        <Route path="/Refferal_main" element={<Reffereal_main user_Points={user_Points} />} />
+  
+
        </Routes>
       
       <Footer />

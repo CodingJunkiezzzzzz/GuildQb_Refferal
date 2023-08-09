@@ -32,69 +32,69 @@ export default function How_it_work() {
                     )}
                   </p>
                   {chain?.id == chains[0]?.id ? (
-                  address ? (
-                    <>
-                      {/* <div className="earn_btn">
+                    address ? (
+                      <>
+                        {/* <div className="earn_btn">
                     <button className="reward_but">
                       <img src={badge} className="walletReward me-2" />
                       earn rewards
                     </button>
                   </div> */}
-                    </>
+                      </>
+                    ) : (
+                      <>
+                        <button
+                          className="connect_wallet_hw"
+                          onClick={() =>
+                            chain?.id == chains[0]?.id
+                              ? open()
+                              : switchNetwork?.(chains[0]?.id)
+                          }
+                        >
+                          {" "}
+                          <img src={icon} alt="" /> connect wallet
+                        </button>
+                      </>
+                    )
                   ) : (
                     <>
-                    {/* <div className="d-flex justify-content-center"> */}
-                    {/* <button className="reward_but" onClick={() =>
-                        chain?.id == chains[0]?.id
-                          ? open()
-                          : switchNetwork?.(chains[0]?.id)
-                      }> */}
-                      <button className="connect_wallet_hw" onClick={() =>
-                        chain?.id == chains[0]?.id
-                          ? open()
-                          : switchNetwork?.(chains[0]?.id)
-                      }>
-                    {" "}
-                    <img src={icon} alt="" /> connect wallet
-                  </button>
-                    {/* </button> */}
-                  {/* </div> */}
+                      <div className="d-flex justify-content-center">
+                        <button
+                          className="reward_but"
+                          onClick={() =>
+                            chain?.id == chains[0]?.id
+                              ? open()
+                              : switchNetwork?.(chains[0]?.id)
+                          }
+                        >
+                          {/* <FaWallet className="walletReward me-2" /> */}
+                          {chain?.id == chains[0]?.id ? (
+                            address ? (
+                              <>
+                                {`${address.substring(
+                                  0,
+                                  6
+                                )}...${address.substring(
+                                  address.length - 4
+                                )}`}{" "}
+                              </>
+                            ) : (
+                              <>
+                                <div className="d-flex justify-content-center">
+                                  <button className="reward_but">
+                                    {/* <FaWallet className="walletReward me-2" /> */}
+                                    Connect wallet
+                                  </button>
+                                </div>
+                              </>
+                            )
+                          ) : (
+                            "Switch NetWork"
+                          )}
+                        </button>
+                      </div>
                     </>
-                  )
-                ) : (
-                  <>
-                  <div className="d-flex justify-content-center">
-                    <button className="reward_but" onClick={() =>
-                        chain?.id == chains[0]?.id
-                          ? open()
-                          : switchNetwork?.(chains[0]?.id)
-                      }>
-                      {/* <FaWallet className="walletReward me-2" /> */}
-                      {chain?.id == chains[0]?.id ? (
-                        address ? (
-                          <>
-                            {`${address.substring(0, 6)}...${address.substring(
-                              address.length - 4
-                            )}`}{" "}
-                          </>
-                        ) : (
-                          <>
-                          <div className="d-flex justify-content-center">
-                    <button className="reward_but">
-                      {/* <FaWallet className="walletReward me-2" /> */}
-                      Connect wallet
-                    </button>
-                  </div>
-                          </>
-                        )
-                      ) : (
-                        "Switch NetWork"
-                      )}
-                    </button>
-                  </div>
-                  </>
-                )}
-                  
+                  )}
                 </div>
               </div>
             </div>

@@ -16,7 +16,7 @@ import { Link } from "react-router-dom";
 
 const Header_two = () => {
   const handleChange = (value) => {
-    console.log(`selected ${value}`);
+    // console.log(`selected ${value}`);
     i18next.changeLanguage(value);
   };
   return (

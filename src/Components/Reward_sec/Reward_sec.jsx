@@ -32,10 +32,10 @@ function Reward_sec({ collection, langValue }) {
                 )}
               </h5>
               {chain?.id == chains[0]?.id ? (
-                  address ? (
+                address ? (
                     <>
                       <div className="earn_btn">
-                    <button className="reward_but">
+                    <button className="reward_but" onClick={()=>open()}>
                       <img src={badge} className="walletReward me-2" />
                       earn rewards
                     </button>

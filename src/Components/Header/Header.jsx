@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./Header.css";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
@@ -14,13 +14,14 @@ import { Select, Space } from "antd";
 import { Link } from "react-router-dom";
 import { useWeb3Modal } from "@web3modal/react";
 import { useBalance, useAccount, useNetwork, useSwitchNetwork } from "wagmi";
+import axios from "axios";
 
-function Header({ handleButtonClick, handleChange }, props) {
+function Header({ handleButtonClick, handleChange,user_Points }, props) {
   const { open, close } = useWeb3Modal();
   const { address } = useAccount();
   const { chain } = useNetwork();
   const { chains, switchNetwork } = useSwitchNetwork();
-
+ 
   return (
     <div className="">
       <>
@@ -112,7 +113,7 @@ function Header({ handleButtonClick, handleChange }, props) {
                           address.length - 4
                         )}`}{" "} */}
                       <Nav.Link className="ptbX mg" href="">
-                        <img src={pt_logo} alt="#" className="ptimgg" />0 pt
+                        <img src={pt_logo} alt="#" className="ptimgg" />{user_Points} pt
                       </Nav.Link>
 
                       <Nav.Link className="ms-2 mg" href="">

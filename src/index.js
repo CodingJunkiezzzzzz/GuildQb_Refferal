@@ -29,11 +29,11 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <>
   <WagmiConfig config={wagmiConfig}>
-  <React.StrictMode>
+
     <BrowserRouter>
     <App />
     </BrowserRouter>
-  </React.StrictMode>
+ 
   </WagmiConfig>
 
 <Web3Modal projectId={projectId} ethereumClient={ethereumClient} />
