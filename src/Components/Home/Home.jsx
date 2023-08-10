@@ -37,8 +37,12 @@ const Home = ({ collection, langValue }) => {
             User_Address: UserID,
           }
         );
+
         setTimeout(() => {
-          Check_Follow();
+          if(address){
+
+            Check_Follow();
+          }
         }, 3000);
 
         let response = await axios.get(
@@ -96,8 +100,11 @@ const Home = ({ collection, langValue }) => {
           User_Address: address,
         }
       );
-      // console.log("Check_Follow",res.data);
-      setIsFollow(res?.data?.data[0]);
+
+      if(res.data.success==true){
+
+        setIsFollow(res?.data?.data[0]);
+      }
     } catch (error) {
       console.log(error);
     }
@@ -105,7 +112,9 @@ const Home = ({ collection, langValue }) => {
 
   useEffect(() => {
     let intveral = setInterval(() => {
-      Check_Follow();
+      if(address){
+        Check_Follow();
+      }
     }, 1000);
 
     return () => clearInterval(intveral);
