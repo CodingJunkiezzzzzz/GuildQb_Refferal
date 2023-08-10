@@ -11,7 +11,7 @@ import { useAccount } from "wagmi";
 import CopyToClipboard from "react-copy-to-clipboard";
 import axios from "axios";
 
-export default function Reffereal_main({user_Points}) {
+export default function Reffereal_main({ user_Points }) {
   const [modalShow, setModalShow] = React.useState(false);
   const [modalShoww, setModalShoww] = React.useState(false);
 
@@ -40,7 +40,6 @@ export default function Reffereal_main({user_Points}) {
     } else {
       setRefAddress("Connect wallet");
     }
-
 
     setInterval(() => {
       setCopied(false);
@@ -120,7 +119,14 @@ export default function Reffereal_main({user_Points}) {
               <div className="d-flex px-0 text-start flex-column flex-md-row gap-3 newed  mt-3">
                 <p className="mb-0 ">Share referral link with your network:</p>
                 <div>
-                  <img src={twiter} alt="" />
+                  <a
+                    className="text-decoration-underline text-white"
+                    target="_blank"
+                    href="https://twitter.com/guildqb/status/1680093793956270080?s=46&t=uvRkGhFIpkzzPVj8jAkdig"
+           
+                  >
+                    <img src={twiter} alt="" />
+                  </a>
                   <img src={fb} alt="" />
                 </div>
               </div>
@@ -173,11 +179,13 @@ export default function Reffereal_main({user_Points}) {
                   </>
                 ) : (
                   <>
-                    <ul style={{listStyle:"none"}}>
+                    <ul style={{ listStyle: "none" }}>
                       {Refferal_Data.map((items, index) => {
                         return (
                           <>
-                            <li className="rewddd_p mt-2">{index+1 }: {items.UserAddress}</li>
+                            <li className="rewddd_p mt-2">
+                              {index + 1}: {items.UserAddress}
+                            </li>
                           </>
                         );
                       })}
@@ -205,7 +213,7 @@ export default function Reffereal_main({user_Points}) {
                   </>
                 ) : (
                   <>
-                    <ul style={{listStyle:"none"}}>
+                    <ul style={{ listStyle: "none" }}>
                       {Refferal_Data.map((items, index) => {
                         return (
                           <>

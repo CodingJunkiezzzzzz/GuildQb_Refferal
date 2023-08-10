@@ -111,6 +111,51 @@ function Reward_slider() {
                 <img src={blur_9} alt="" className="slDPicSty_t" />
                 </div> 
         </SwiperSlide>
+        <SwiperSlide className='text-danger'>
+            <div className="crtUpper">
+                <img src={ref_picc1} alt="" className="slDPicSty" />
+                </div> 
+        </SwiperSlide>
+        <SwiperSlide className='text-danger'>
+            <div className="crtUpper">
+                <img src={ref_picc2} alt="" className="slDPicSty" />
+                </div> 
+        </SwiperSlide>
+        <SwiperSlide className='text-danger'>
+            <div className="crtUpper">
+                <img src={ref_picc3} alt="" className="slDPicSty" />
+                </div> 
+        </SwiperSlide>
+        <SwiperSlide className='text-danger'>
+            <div className="crtUpper">
+                <img src={blur} alt="" className="slDPicSty" />
+                </div> 
+        </SwiperSlide>
+        <SwiperSlide className='text-danger'>
+            <div className="crtUpper">
+                <img src={blur_2} alt="" className="slDPicSty" />
+                </div> 
+        </SwiperSlide>
+        <SwiperSlide className='text-danger'>
+            <div className="crtUpper">
+                <img src={blur_3} alt="" className="slDPicSty" />
+                </div> 
+        </SwiperSlide>
+        <SwiperSlide className='text-danger'>
+            <div className="crtUpper_t">
+                <img src={blur_7} alt="" className="slDPicSty_t" />
+                </div> 
+        </SwiperSlide>
+        <SwiperSlide className='text-danger'>
+            <div className="crtUpper_t">
+                <img src={blur_8} alt="" className="slDPicSty_t" />
+                </div> 
+        </SwiperSlide>
+        <SwiperSlide className='text-danger'>
+            <div className="crtUpper_t">
+                <img src={blur_9} alt="" className="slDPicSty_t" />
+                </div> 
+        </SwiperSlide>
       </Swiper>
     </div>
     </div>
