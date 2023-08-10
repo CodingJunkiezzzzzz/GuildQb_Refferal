@@ -192,6 +192,10 @@
 
 @media only screen and (max-width: 600px) {
 
+  .engref{
+    display: none;
+  }
+
   .hxnone{
     display: block;
   }
@@ -571,15 +575,15 @@
   }
 }
 
-@media screen and (max-width: 600px) {
+/* @media screen and (max-width: 600px) {
   .rk {
     display: none;
   }
-}
+} */
 
 @media screen and (max-width: 320px) {
   .main_titleLayer {
-    font-size: 33px !important;
+    font-size: 31px !important;
     font-weight: 900 !important;
   }
 }
@@ -588,7 +592,7 @@
   .main_titleLayer {
     font-size: 33px !important;
     font-weight: 900 !important;
-    padding: 0 29px;
+    padding: 0 19px;
   }
 }
 
@@ -604,7 +608,7 @@
   .main_titleLayer {
     font-size: 39px !important;
     font-weight: 900 !important;
-    padding: 0 31px;
+    padding: 0 21px;
   }
 }
 
