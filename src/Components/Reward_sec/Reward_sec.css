@@ -44,6 +44,10 @@
   font-family: "Murecho", sans-serif;
 }
 
+.jp_nnn{
+  display: none !important;
+}
+
 .title_upper {
   margin-top: 80px;
   margin-bottom: 60px;
@@ -105,6 +109,12 @@
   color: #fff;
   /* font-family: "Murecho", sans-serif; */
 }
+
+/* @media (min-width: 1100px) and (max-width: 1433px) {
+  .exclusive_title{
+    font-size: 39px;
+  }
+} */
 
 .exclu_subtitle {
   font-family: "Murecho", sans-serif;
@@ -173,10 +183,18 @@
 }
 
 .guildmob{
+  display: none !important;
+}
+
+.hxnone{
   display: none;
 }
 
 @media only screen and (max-width: 600px) {
+
+  .hxnone{
+    display: block;
+  }
   .gradf {
     border-radius: 587px;
     background: rgba(242, 0, 220, 0.21);
@@ -266,10 +284,6 @@
     display: none;
   }
 
-  
-  .exclu_subtitle {
-    font-size: 14px;
-  }
   .rk4 {
     display: none;
   }
@@ -287,6 +301,10 @@
   .exclusive_title{
     font-size: 30px;
   }
+
+  .exclu_subtitle {
+    font-size: 11px;
+  }
 }
 
 @media (min-width: 601px) and (max-width: 8000px) {
@@ -298,6 +316,10 @@
 @media (min-width: 351px) and (max-width: 600px) {
   .exclusive_title {
     font-size: 34px;
+  }
+
+  .exclu_subtitle {
+    font-size: 14px;
   }
 }
 
@@ -442,6 +464,16 @@
   }
 }
 
+
+
+@media (min-width: 1100px) and (max-width: 55000px) {
+  
+  .hxnbr{
+    display: none;
+  }
+}
+
+
 @media (min-width: 821px) and (max-width: 991px) {
   /* .rwd_back {
     background-image: url(../Assets/tab_bgrwaer.png);
@@ -483,6 +515,10 @@
     flex-direction: column !important;
     justify-content: center !important;
     align-items: center !important;
+  }
+
+  .refVala{
+    display: none;
   }
 
   .exclu_subtitle {

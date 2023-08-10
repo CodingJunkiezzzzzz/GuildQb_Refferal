@@ -114,6 +114,7 @@ export default function How_it_work_two({Add_Follower,isFollow}) {
                   <div className="two_btn flex-column flex-md-row d-flex gap-4">
                     <a
                       href="https://discord.com/invite/BNjFBTgpMt"
+                      target="_blank"
                      onClick={()=>Add_Follower("discord")}
                       className="text-decoration-none text-white"
                     >
@@ -125,6 +126,7 @@ export default function How_it_work_two({Add_Follower,isFollow}) {
                     </a>
                     <a
                       href="https://twitter.com/GuildQB"
+                      target="_blank"
                      onClick={()=>Add_Follower("twitter")}
                       className="text-decoration-none text-white"
                     >

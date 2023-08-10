@@ -16,6 +16,8 @@ function Reward_sec({ collection, langValue }) {
   const { chain } = useNetwork();
   const { chains, switchNetwork } = useSwitchNetwork();
 
+  console.log("langValuehx", langValue);
+
   return (
     <div>
       <div className="container-fluid rwd_back px-0">
@@ -112,22 +114,22 @@ function Reward_sec({ collection, langValue }) {
         </div>
 
         <div className="row exclusivemainUpper  justify-content-center rec">
-          <div className="col-lg-7">
+          <div className="col-lg-12">
             <div className="exclusive_titleupper">
               <h1 className="exclusive_title">
-                {t("Get exclusive GuildQB ")}<br className="guildmob"/>{t("rewards for")} <br className="refVala"/>{" "}
+                {t("Get exclusive GuildQB ")}<br className="hxnbr" />{t("rewards for")} <br className={langValue === 'jp' ? "jp_nnn" : "refVala"}/>{" "}
                 {t("referrals!")}
               </h1>
               <h5 className="exclu_subtitle">
                 {t(
                   "Earn 1 point for every friend who installs"
                 )}
-                {langValue == 'jp' ? <br /> : ''}
+                <br className="hxnone"/>
                 {t(
                   " GuildQB and your friend will get 1"
-                )}
-                <br className="rk3" /> {t("point too. Get different")}
-                <br className="rk4" /> {t("kinds of rewards ")}{t("with your points.")}
+                  )}
+                  {langValue == 'jp' ? <br /> : ''} {t("point too. Get different")}
+                 {t("kinds of rewards ")}{t("with your points.")}
               </h5>
             </div>
           </div>
@@ -168,6 +170,7 @@ function Reward_sec({ collection, langValue }) {
           </div>
         </div>
       </div> */}
+      
     </div>
   );
 }

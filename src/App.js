@@ -32,7 +32,9 @@ function App() {
 
     setlangValue(value)
     i18next.changeLanguage(value);
+    // console.log("changeLanguage", value);
   };
+
 
   const handleButtonClick = (newData) => {
     setcollection(newData);
@@ -55,7 +57,7 @@ function App() {
 
   return (
     <div className="App">
-      <Header user_Points={user_Points} />
+      <Header user_Points={user_Points} handleChange={handleChange} />
       <Routes>
         <Route path="/" element={<Home langValue={langValue} collection={collection}/>} />
         <Route path="/Refferal_main" element={<Reffereal_main user_Points={user_Points} />} />

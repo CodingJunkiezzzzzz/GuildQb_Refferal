@@ -153,7 +153,7 @@ export default function Reffereal_main({user_Points}) {
             </div>
           </div>
         </div>
-        <SelectRewards show={modalShoww} onHide={() => setModalShoww(false)} />
+        {/* <SelectRewards show={modalShoww} onHide={() => setModalShoww(false)} /> */}
 
         {/* last table with white header  */}
 

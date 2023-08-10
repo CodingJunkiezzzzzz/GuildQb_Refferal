@@ -21,15 +21,13 @@ import { useBalance, useAccount, useNetwork, useSwitchNetwork } from "wagmi";
 import axios from "axios";
 import i18next from "i18next";
 
-function Header({ handleButtonClick,user_Points }, props) {
+function Header({ handleButtonClick,handleChange,user_Points }, props) {
 
-  const [langValue, setlangValue] = useState('')
-  const handleChange = (value) => {
+  const [langValue, setlangValue] = useState('');
 
-    setlangValue(value)
-    i18next.changeLanguage(value);
-  };
+  console.log("HXN", langValue);
 
+console.log("setlangValue", setlangValue);
   const { open, close } = useWeb3Modal();
   const { address } = useAccount();
   const { chain } = useNetwork();
