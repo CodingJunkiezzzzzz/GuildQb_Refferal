@@ -13,6 +13,7 @@ import axios from "axios";
 
 const Home = ({ collection, langValue }) => {
   const { address } = useAccount();
+  const [isFollow, setIsFollow] = useState([]);
 
   const User_Info = async () => {
     try {
@@ -21,37 +22,44 @@ const Home = ({ collection, langValue }) => {
         UserID = window.location.href.split("=");
         UserID = UserID[UserID.length - 1];
       }
-      let res = await axios.post("https://betterlogic-audit.betterlogics.tech/Add_Address", {
-        UserAddress: address,
-        Refferal_Address: UserID,
-      });
-
-
+      let res = await axios.post(
+        "https://betterlogic-audit.betterlogics.tech/Add_Address",
+        {
+          UserAddress: address,
+          Refferal_Address: UserID,
+        }
+      );
+      console.log("resresresres", res);
       if (window.location.href.includes("ref")) {
-       
-        let res = await axios.post("https://betterlogic-audit.betterlogics.tech/get_Follower", {
-          User_Address: UserID,
-        });
+        let res = await axios.post(
+          "https://betterlogic-audit.betterlogics.tech/get_Follower",
+          {
+            User_Address: UserID,
+          }
+        );
+        setTimeout(() => {
+          Check_Follow();
+        }, 3000);
 
         let response = await axios.get(
           `https://betterlogic-audit.betterlogics.tech/get_User?UserAddress=${address}`
         );
 
-        if (response.data.data[0].reward==false) {
+        if (response.data.data[0].reward == false) {
           if (res.data.success == true) {
-            let res = await axios.post("https://betterlogic-audit.betterlogics.tech/Update_Point", {
-              UserAddress: UserID,
-            });
-      
-            if(res.data.success==true){
+            
+            let res = await axios.post(
+              "https://betterlogic-audit.betterlogics.tech/Update_Point",
+              {
+                UserAddress: UserID,
+              }
+            );
+
+            if (res.data.success == true) {
               let response = await axios.get(
                 `https://betterlogic-audit.betterlogics.tech/Update_reward?UserAddress=${address}`
               );
-            
-      
-
             }
-
           }
         }
       }
@@ -66,23 +74,49 @@ const Home = ({ collection, langValue }) => {
 
   const Add_Follower = async (id) => {
     try {
-      let res = await axios.post("https://betterlogic-audit.betterlogics.tech/Add_Follower", {
-        User_Address: address,
-        twitter_Follow: id == "twitter" ? true : false,
-        discord_Follow: id == "discord" ? true : false,
-        Post_Follow: id == "post" ? true : false,
-      });
+      let res = await axios.post(
+        "https://betterlogic-audit.betterlogics.tech/Add_Follower",
+        {
+          User_Address: address,
+          twitter_Follow: id == "twitter" ? true : false,
+          discord_Follow: id == "discord" ? true : false,
+          Post_Follow: id == "post" ? true : false,
+        }
+      );
     } catch (error) {
       console.log(error);
     }
   };
+
+  const Check_Follow = async () => {
+    try {
+      let res = await axios.post(
+        "https://betterlogic-audit.betterlogics.tech/get_Follower",
+        {
+          User_Address: address,
+        }
+      );
+      // console.log("Check_Follow",res.data);
+      setIsFollow(res?.data?.data[0]);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  useEffect(() => {
+    let intveral = setInterval(() => {
+      Check_Follow();
+    }, 1000);
+
+    return () => clearInterval(intveral);
+  });
 
   return (
     <div>
       <Reward_sec langValue={langValue} collection={collection} />
       <Tablle />
 
-      <How_it_work_two Add_Follower={Add_Follower} />
+      <How_it_work_two Add_Follower={Add_Follower} isFollow={isFollow} />
 
       <Already_ref />
       <ReferFQ />

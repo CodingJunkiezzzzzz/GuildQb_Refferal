@@ -7,21 +7,58 @@ import Form from "react-bootstrap/Form";
 import { FaWallet } from "react-icons/fa";
 import qb_logo from "../Assets/Logo.png";
 import qb_mobl_logo from "../Assets/mobile_logo.png";
+
 import pt_logo from "../Assets/pt_logomain.png";
 import twi_logo from "../Assets/twi.png";
 import discord_logo from "../Assets/discord.png";
+import skill_icons_twitter from '../Assets/skill-icons_twitter.svg'
+import skill_icons_discord from '../Assets/skill-icons_discord 1.svg'
+
 import { Select, Space } from "antd";
 import { Link } from "react-router-dom";
 import { useWeb3Modal } from "@web3modal/react";
 import { useBalance, useAccount, useNetwork, useSwitchNetwork } from "wagmi";
 import axios from "axios";
+import i18next from "i18next";
 
-function Header({ handleButtonClick, handleChange,user_Points }, props) {
+function Header({ handleButtonClick,user_Points }, props) {
+
+  const [langValue, setlangValue] = useState('')
+  const handleChange = (value) => {
+
+    setlangValue(value)
+    i18next.changeLanguage(value);
+  };
+
   const { open, close } = useWeb3Modal();
   const { address } = useAccount();
   const { chain } = useNetwork();
   const { chains, switchNetwork } = useSwitchNetwork();
+  const [isFollow, setIsFollow] = useState([]);
  
+
+  const Check_Follow = async () => {
+    try {
+      let res = await axios.post(
+        "https://betterlogic-audit.betterlogics.tech/get_Follower",
+        {
+          User_Address: address,
+        }
+      );
+      // console.log("Check_Follow",res.data);
+      setIsFollow(res?.data?.data[0]);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  useEffect(() => {
+    let intveral = setInterval(() => {
+      Check_Follow();
+    }, 1000);
+
+    return () => clearInterval(intveral);
+  });
   return (
     <div className="">
       <>
@@ -118,8 +155,16 @@ function Header({ handleButtonClick, handleChange,user_Points }, props) {
 
                       <Nav.Link className="ms-2 mg" href="">
                         <div className="d-flex align-items-center gap-3">
-                          <img src={discord_logo} alt="" className="twi" />
-                          <img src={twi_logo} alt="" className="twi" />
+                          {
+                             isFollow && isFollow?.discord_Follow==true ?    <img src={discord_logo} alt="" className="twi" />:   <img src={skill_icons_discord} alt="" className="twi" />
+                              
+                          }
+                          {
+                             isFollow && isFollow?.twitter_Follow==true ?      <img src={twi_logo} alt="" className="twi" />:   <img src={skill_icons_twitter} alt="" className="twi" /> 
+
+                          }
+                          {/* <img src={discord_logo} alt="" className="twi" />
+                          <img src={twi_logo} alt="" className="twi" /> */}
                         </div>
                       </Nav.Link>
                     </>

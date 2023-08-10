@@ -26,7 +26,7 @@ export default function Reffereal_main({user_Points}) {
       let res = await axios.get(
         `https://betterlogic-audit.betterlogics.tech/get_All_Refferal?Refferal_Address=${address}`
       );
-      // console.log("res", res.data.data);
+      console.log("res", res.data.data);
       setRefferal_Data(res.data.data);
     } catch (error) {
       console.log(error);

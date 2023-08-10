@@ -10,7 +10,7 @@ import { useAccount, useNetwork, useSwitchNetwork } from "wagmi";
 import { Link } from "react-router-dom";
 import { useWeb3Modal } from "@web3modal/react";
 
-export default function How_it_work_two({Add_Follower}) {
+export default function How_it_work_two({Add_Follower,isFollow}) {
   const { t } = useTranslation();
   const { open, close } = useWeb3Modal();
 
@@ -65,34 +65,51 @@ export default function How_it_work_two({Add_Follower}) {
                     ① {t("Follow")}{" "}
                     <a
                       className="text-decoration-underline text-white"
+                      target="_blank"
                       href="https://twitter.com/GuildQB"
                      onClick={()=>Add_Follower("twitter")}
                     >
                       {" "}
                       {t("GuildQB's official")} {t("Twitter")}{" "}
                     </a>
+                   
+                   
+                    {
+                      isFollow && isFollow?.twitter_Follow==true && <><img src={icon} alt="" className="mx-2" /></>
+                      
+                    }
+                    
                   </h5>
                   <h5>
                     {t("② Retweet the")}{" "}
                     <a
                       className="text-decoration-underline text-white"
+                      target="_blank"
                       href="https://twitter.com/guildqb/status/1680093793956270080?s=46&t=uvRkGhFIpkzzPVj8jAkdig"
                      onClick={()=>Add_Follower("post")}
                     >
                       {" "}
-                      {t("designated post")}{" "}
+                      {t("designated post")}
                     </a>
+                  
+                    {
+                    isFollow &&  isFollow?.Post_Follow==true && <><img src={icon} alt="" className="mx-2" /></>
+                    }
                   </h5>
                   <h5>
                     ③ {t("Follow the")}{" "}
                     <a
                       className="text-decoration-underline text-white"
+                      target="_blank"
                       href="https://discord.com/invite/BNjFBTgpMt"
                      onClick={()=>Add_Follower("discord")}
                     >
                       {" "}
                       {t("official GuildQB Discord")}{" "}
                     </a>
+                    {
+                     isFollow && isFollow?.discord_Follow==true && <><img src={icon} alt="" className="mx-2" /></>
+                    }
                   </h5>
                   <div className="two_btn flex-column flex-md-row d-flex gap-4">
                     <a
@@ -139,8 +156,8 @@ export default function How_it_work_two({Add_Follower}) {
                         className="text-decoration-none"
                         to="/Refferal_main"
                       >
-                        {" "}
-                        <button className="connect_wallet_hw">
+                  
+                        <button disabled={isFollow &&  isFollow?.discord_Follow==true && isFollow?.twitter_Follow==true && isFollow?.Post_Follow == true ? false:true }  style={{cursor:(isFollow &&  isFollow?.discord_Follow==true && isFollow?.twitter_Follow==true && isFollow?.Post_Follow == true ? "pointer":"no-drop")}} className="connect_wallet_hw">
                           {" "}
                           <img src={iconn} alt="" /> Share link
                         </button>
