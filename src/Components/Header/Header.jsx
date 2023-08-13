@@ -97,7 +97,7 @@ console.log("setlangValue", setlangValue);
             </div>
             <Navbar.Collapse id="responsive-navbar-nav">
               <Nav className="me-auto firstNavLink">
-                <Nav.Link className="MainLink" href="#">
+                <Nav.Link className="MainLink" href="https://guildqb.com/" target="_blank">
                   Metaverse
                 </Nav.Link>
                 <Nav.Link className="MainLink" href="#">
@@ -109,10 +109,10 @@ console.log("setlangValue", setlangValue);
                 <Nav.Link className="MainLink" href="#">
                   OharaiNFT
                 </Nav.Link>
-                <Nav.Link className="MainLink" href="#">
+                <Nav.Link className="MainLink" href="https://app.gitbook.com/o/BTJROYn39RJU8w8qvwOl/s/UcPupZHhp3DWUIelDaoj/guildqb-overview/guildqbtoha" target="_blank">
                   Scholarship
                 </Nav.Link>
-                <Nav.Link className="MainLink" href="#">
+                <Nav.Link className="MainLink" href="https://guildqb.gitbook.io/guildqb-wp-v1.0/guildqb-overview/what-is-guildqb" target="_blank">
                   Dock
                 </Nav.Link>
               </Nav>
