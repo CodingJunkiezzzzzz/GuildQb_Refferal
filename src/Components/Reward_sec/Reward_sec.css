@@ -32,10 +32,14 @@
 }
 
 .subtitle {
-  color: #fff;
+  /* color: #fff; */
+  background: linear-gradient(133deg, #FFF 0%, #B8DFFF 51.04%, #FFD8FB 100%);
+background-clip: text;
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
   font-size: 16px;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 600;
   line-height: 150%; /* 24px */
   letter-spacing: 0.16px;
   text-align: start;

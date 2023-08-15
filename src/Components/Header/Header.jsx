@@ -97,21 +97,21 @@ console.log("setlangValue", setlangValue);
             </div>
             <Navbar.Collapse id="responsive-navbar-nav">
               <Nav className="me-auto firstNavLink">
-                <Nav.Link className="MainLink" href="#">
+                {/* <Nav.Link className="MainLink" href="#">
                   Metaverse
                 </Nav.Link>
                 <Nav.Link className="MainLink" href="#">
                   Token
-                </Nav.Link>
+                </Nav.Link> */}
                 <Nav.Link className="MainLink" href="#">
                   Quest
                 </Nav.Link>
-                <Nav.Link className="MainLink" href="#">
+                {/* <Nav.Link className="MainLink" href="#">
                   OharaiNFT
-                </Nav.Link>
-                <Nav.Link className="MainLink" href="#">
+                </Nav.Link> */}
+                {/* <Nav.Link className="MainLink" href="#">
                   Scholarship
-                </Nav.Link>
+                </Nav.Link> */}
                 <Nav.Link className="MainLink" href="#">
                   Dock
                 </Nav.Link>
