@@ -117,8 +117,8 @@ function Reward_sec({ collection, langValue }) {
           <div className="col-lg-12">
             <div className="exclusive_titleupper">
               <h1 className="exclusive_title">
-                {t("Get exclusive GuildQB ")}<br className="hxnbr" />{t("rewards for")} <br className={langValue === 'jp' ? "jp_nnn" : "refVala"}/>{" "}
-                {t("referrals!")}
+                {t("Get exclusive GuildQB ")}<br className="hxnbr" />{t("rewards for referrals!")} <br className={langValue === 'jp' ? "jp_nnn" : "refVala"}/>{" "}
+                {/* {t("referrals!")} */}
               </h1>
               <h5 className="exclu_subtitle">
                 {t(
@@ -128,8 +128,7 @@ function Reward_sec({ collection, langValue }) {
                 {t(
                   " GuildQB and your friend will get 1"
                   )}
-                  {langValue == 'jp' ? <br /> : ''} {t("point too. Get different")}
-                 {t("kinds of rewards ")}{t("with your points.")}
+                  {langValue == 'jp' ? <br /> : ''} {t("point too. Get different kinds of rewards")} <br />{t("with your points.")}
               </h5>
             </div>
           </div>
