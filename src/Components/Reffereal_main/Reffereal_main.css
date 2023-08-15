@@ -20,6 +20,7 @@
   color: white;
   opacity: 0.5;
   font-family: "Murecho", sans-serif;
+  background-color: transparent;
 }
 
 .breadcrumb-item + .breadcrumb-item::before {

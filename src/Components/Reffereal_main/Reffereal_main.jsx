@@ -10,17 +10,20 @@ import { Link } from "react-router-dom";
 import { useAccount } from "wagmi";
 import CopyToClipboard from "react-copy-to-clipboard";
 import axios from "axios";
+import { FacebookButton, FacebookCount, TwitterButton } from "react-social";
 
 export default function Reffereal_main({ user_Points }) {
+
   const [modalShow, setModalShow] = React.useState(false);
   const [modalShoww, setModalShoww] = React.useState(false);
-
   const [refAddress, setRefAddress] = useState("");
   const [copied, setCopied] = useState(false);
   const [Refferal_Data, setRefferal_Data] = useState([]);
-
   const { address } = useAccount();
+
+  let url = <><p>Tayyab</p> </>
   let history = window.location;
+
   const Get_Refferal = async () => {
     try {
       let res = await axios.get(
@@ -38,7 +41,7 @@ export default function Reffereal_main({ user_Points }) {
       Get_Refferal();
       setRefAddress(`${history.origin}/?ref=${address}`);
     } else {
-      setRefAddress("Connect wallet");
+      setRefAddress("Connect Wallet");
     }
 
     setInterval(() => {
@@ -119,15 +122,17 @@ export default function Reffereal_main({ user_Points }) {
               <div className="d-flex px-0 text-start flex-column flex-md-row gap-3 newed  mt-3">
                 <p className="mb-0 ">Share referral link with your network:</p>
                 <div>
-                  <a
-                    className="text-decoration-underline text-white"
-                    target="_blank"
-                    href="https://twitter.com/guildqb/status/1680093793956270080?s=46&t=uvRkGhFIpkzzPVj8jAkdig"
-           
-                  >
+                <TwitterButton url={`I have found a great WEB3 game guild - @GuildQB!  Check it Out at my referral link: ${refAddress}`}
+                  appId="hoR0RdUg7zLKb5xlSBp85vn3i" style={{background:"transparent",border:"none"}}>
+                    {/* <FacebookCount url={url} /> */}
                     <img src={twiter} alt="" />
-                  </a>
-                  <img src={fb} alt="" />
+                  </TwitterButton>
+                    
+               
+                  {/* <FacebookButton url="Tayyab" appId="196427536765451" style={{background:"transparent",border:"none"}}>
+                   
+                    <img src={fb} alt="" />
+                  </FacebookButton> */}
                 </div>
               </div>
             </div>
