@@ -386,7 +386,17 @@
   }
 }
 
+@media screen and (max-width: 1010px) {
+  .li_desk{
+    display: none !important;
+  }
+}
 
+@media (min-width: 1011px) and (max-width: 900000px) {
+  .li_mob{
+    display: none !important;
+  }
+}
                                               
 
 

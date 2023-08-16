@@ -11,8 +11,10 @@ import { useAccount } from "wagmi";
 import CopyToClipboard from "react-copy-to-clipboard";
 import axios from "axios";
 import { FacebookButton, FacebookCount, TwitterButton } from "react-social";
+import { useTranslation } from "react-i18next";
 
 export default function Reffereal_main({ user_Points }) {
+  const { t } = useTranslation();
 
   const [modalShow, setModalShow] = React.useState(false);
   const [modalShoww, setModalShoww] = React.useState(false);
@@ -116,8 +118,8 @@ export default function Reffereal_main({ user_Points }) {
                 />
               </div>
               <p className="para_ref">
-                You've received your referral link, and sharing it with your
-                friends can earn you reward points. Thanks to your support!
+                {t("You've received your referral link, and sharing it with your friends can earn you reward points. Thanks to your support!")}
+                
               </p>
               <div className="d-flex px-0 text-start flex-column flex-md-row gap-3 newed  mt-3">
                 <p className="mb-0 ">Share referral link with your network:</p>
@@ -188,8 +190,13 @@ export default function Reffereal_main({ user_Points }) {
                       {Refferal_Data.map((items, index) => {
                         return (
                           <>
-                            <li className="rewddd_p mt-2">
+                          <li className="rewddd_p li_desk mt-2">
                               {index + 1}: {items.UserAddress}
+                            </li>
+                            <li className="rewddd_p li_mob mt-2">
+                              {index + 1}: {`${items.UserAddress.substring(0, 10)}...${items.UserAddress.substring(
+                          items.UserAddress.length - 10
+                        )}`}
                             </li>
                           </>
                         );
