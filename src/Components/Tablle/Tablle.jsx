@@ -26,7 +26,7 @@ function Tablle() {
             1{" "}
           </div>
           <div className="col-3  col-md-3 col-lg-2  tableborder p-3 tableP">
-            2{" "}
+            1{" "}
           </div>
           <div className="col-5  col-lg-4 tableborder p-3 tableP">
             QB {t("Badge")} I
