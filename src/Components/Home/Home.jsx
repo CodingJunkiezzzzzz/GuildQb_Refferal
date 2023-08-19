@@ -22,47 +22,104 @@ const Home = ({ collection, langValue }) => {
         UserID = window.location.href.split("=");
         UserID = UserID[UserID.length - 1];
       }
-      let res = await axios.post(
-        "https://betterlogic-audit.betterlogics.tech/Add_Address",
-        {
-          UserAddress: address,
-          Refferal_Address: UserID,
-        }
-      );
-      console.log("resresresres", res);
-      if (window.location.href.includes("ref")) {
-        let res = await axios.post(
-          "https://betterlogic-audit.betterlogics.tech/get_Follower",
+
+      if (address) {
+        let Add_Address = await axios.post(
+          "https://betterlogic-audit.betterlogics.tech/Add_Address",
           {
-            User_Address: UserID,
+            UserAddress: address,
+            Refferal_Address: UserID,
           }
         );
+        // console.log("resresresres", Add_Address);
+        if (window.location.href.includes("ref")) {
+          let res = await axios.post(
+            "https://betterlogic-audit.betterlogics.tech/get_Follower",
+            {
+              User_Address: UserID,
+            }
+          );
 
-        setTimeout(() => {
-          if(address){
+          setTimeout(() => {
+            if (address) {
+              Check_Follow();
+            }
+          }, 3000);
 
-            Check_Follow();
-          }
-        }, 3000);
+          const response = await axios.get(
+            `https://betterlogic-audit.betterlogics.tech/get_User?UserAddress=${address}`
+          );
 
-        let response = await axios.get(
-          `https://betterlogic-audit.betterlogics.tech/get_User?UserAddress=${address}`
-        );
-
-        if (response.data.data[0].reward == false) {
-          if (res.data.success == true) {
-            
-            let res = await axios.post(
-              "https://betterlogic-audit.betterlogics.tech/Update_Point",
-              {
-                UserAddress: UserID,
-              }
-            );
-
+          if (response.data.data[0].reward == false) {
             if (res.data.success == true) {
-              let response = await axios.get(
-                `https://betterlogic-audit.betterlogics.tech/Update_reward?UserAddress=${address}`
+              let Update_Point = await axios.post(
+                "https://betterlogic-audit.betterlogics.tech/Update_Point",
+                {
+                  UserAddress: UserID,
+                }
               );
+
+              if (Update_Point.data.success == true) {
+                let response = await axios.get(
+                  `https://betterlogic-audit.betterlogics.tech/Update_reward?UserAddress=${address}`
+                );
+              }
+            }
+          }
+
+          let get_Follower = await axios.post(
+            "https://betterlogic-audit.betterlogics.tech/get_Follower",
+            {
+              User_Address: address,
+            }
+          );
+
+          if (response.data.data[0].bonus_point == false) {
+            if (get_Follower.data.success == true) {
+              let Update_Point = await axios.post(
+                "https://betterlogic-audit.betterlogics.tech/Update_Point",
+                {
+                  UserAddress: address,
+                }
+              );
+
+              if (Update_Point.data.success == true) {
+                let response = await axios.get(
+                  `https://betterlogic-audit.betterlogics.tech/Update_bonus_point?UserAddress=${address}`
+                );
+              }
+            }
+          }
+        } else {
+          let USer_get = await axios.post(
+            "https://betterlogic-audit.betterlogics.tech/get_Follower",
+            {
+              User_Address: address,
+            }
+          );
+          setTimeout(() => {
+            if (address) {
+              Check_Follow();
+            }
+          }, 3000);
+          console.log("USer_get",USer_get);
+          const response = await axios.get(
+            `https://betterlogic-audit.betterlogics.tech/get_User?UserAddress=${address}`
+          );
+          if (response.data.data[0].bonus_point === false) {
+            if (USer_get.data.success === true) {
+              let Update_Point = await axios.post(
+                "https://betterlogic-audit.betterlogics.tech/Update_Point",
+                {
+                  UserAddress: address,
+                }
+              );
+
+              if (Update_Point.data.success == true) {
+                let response = await axios.get(
+                  `https://betterlogic-audit.betterlogics.tech/Update_bonus_point?UserAddress=${address}`
+                );
+              }
             }
           }
         }
@@ -95,14 +152,14 @@ const Home = ({ collection, langValue }) => {
   const Check_Follow = async () => {
     try {
       let res = await axios.post(
-        "https://betterlogic-audit.betterlogics.tech/get_Follower",
+        "https://betterlogic-audit.betterlogics.tech/get_Follower_All",
         {
           User_Address: address,
         }
       );
+      console.log("Check_Follow",res.data);
 
-      if(res.data.success==true){
-
+      if (res.data.success == true) {
         setIsFollow(res?.data?.data[0]);
       }
     } catch (error) {
@@ -112,11 +169,10 @@ const Home = ({ collection, langValue }) => {
 
   useEffect(() => {
     let intveral = setInterval(() => {
-      if(address){
+      if (address) {
         Check_Follow();
       }
     }, 1000);
-
     return () => clearInterval(intveral);
   });
 

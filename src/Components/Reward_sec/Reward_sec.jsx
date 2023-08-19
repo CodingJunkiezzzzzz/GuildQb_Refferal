@@ -46,10 +46,13 @@ function Reward_sec({ collection, langValue }) {
                   ) : (
                     <>
                     <div className="d-flex justify-content-center">
-                    <button className="reward_but" onClick={() =>
-                        chain?.id == chains[0]?.id
-                          ? open()
-                          : switchNetwork?.(chains[0]?.id)
+                    <button className="reward_but"  onClick={() =>
+                        (
+                          !address ? open() :
+                          chain?.id == chains[0]?.id
+                            ? open()
+                            : switchNetwork?.(chains[0]?.id)
+                        )
                       }>
                       <FaWallet className="walletReward me-2" />
                       Connect wallet
@@ -60,13 +63,18 @@ function Reward_sec({ collection, langValue }) {
                 ) : (
                   <>
                   <div className="d-flex justify-content-center">
-                    <button className="reward_but" onClick={() =>
-                        chain?.id == chains[0]?.id
-                          ? open()
-                          : switchNetwork?.(chains[0]?.id)
+                    <button className="reward_but"  onClick={() =>
+                        (
+                          !address ? open() :
+                          chain?.id == chains[0]?.id
+                            ? open()
+                            : switchNetwork?.(chains[0]?.id)
+                        )
                       }>
                       <FaWallet className="walletReward me-2" />
-                      {chain?.id == chains[0]?.id ? (
+                      {
+                        !address ?  "Connect wallet" : <>
+                         {chain?.id == chains[0]?.id ? (
                         address ? (
                           <>
                             {`${address.substring(0, 6)}...${address.substring(
@@ -74,18 +82,13 @@ function Reward_sec({ collection, langValue }) {
                             )}`}{" "}
                           </>
                         ) : (
-                          <>
-                          <div className="d-flex justify-content-center">
-                    <button className="reward_but">
-                      <FaWallet className="walletReward me-2" />
-                      Connect wallet
-                    </button>
-                  </div>
-                          </>
+                          "Connect wallet"
                         )
                       ) : (
                         "Switch NetWork"
                       )}
+                        </>
+                      }
                     </button>
                   </div>
                   </>

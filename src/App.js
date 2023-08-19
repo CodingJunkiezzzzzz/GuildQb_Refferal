@@ -20,6 +20,7 @@ import i18next from "i18next";
 import { useWeb3Modal } from '@web3modal/react';
 import { useAccount } from "wagmi";
 import axios from "axios";
+import Twitter_Auth from "./Components/Twitter_Auth";
 
 
 function App() {
@@ -52,7 +53,12 @@ function App() {
   }
 
   useEffect(()=>{
-    User_Points()
+    let intveral = setInterval(() => {
+      User_Points()
+     
+    }, 1000);
+
+    return () => clearInterval(intveral);
   },[])
 
   return (
@@ -61,6 +67,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home langValue={langValue} collection={collection}/>} />
         <Route path="/Refferal_main" element={<Reffereal_main user_Points={user_Points} />} />
+        <Route path="/Twitter_Auth" element={<Twitter_Auth />} />
   
 
        </Routes>

@@ -359,3 +359,7 @@
     width: 47% !important;
   }
 }
+
+.reward_but{
+  z-index: 1 !important;
+}

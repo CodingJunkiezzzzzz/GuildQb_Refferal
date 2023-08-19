@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./How_it_work.css";
 import icon from "../Assets/green.svg";
 import Wallet from "../Assets/wallet_icon.svg";
@@ -9,8 +9,9 @@ import { useTranslation } from "react-i18next";
 import { useAccount, useNetwork, useSwitchNetwork } from "wagmi";
 import { Link } from "react-router-dom";
 import { useWeb3Modal } from "@web3modal/react";
+import axios from "axios";
 
-export default function How_it_work_two({Add_Follower,isFollow}) {
+export default function How_it_work_two({ Add_Follower, isFollow }) {
   const { t } = useTranslation();
   const { open, close } = useWeb3Modal();
 
@@ -18,9 +19,39 @@ export default function How_it_work_two({Add_Follower,isFollow}) {
   const { chain } = useNetwork();
   const { chains, switchNetwork } = useSwitchNetwork();
 
+  const [user, setUser] = useState("Username ");
+
+  async function getMe() {
+    const response = await axios.get(
+      `https://betterlogic-audit.betterlogics.tech/get_Discord_Auth_Data?User_Address=${address}`
+    );
+
+    console.log("response", response.data);
+
+    setUser(response.data);
+  }
+
+  useEffect(() => {
+    getMe();
+  }, []);
+
+  const Add_Auth = async () => {
+    try {
+      setTimeout(async () => {
+        const response = await axios.get(
+          `https://betterlogic-audit.betterlogics.tech/get_UserNamer?User_Address=${address}`
+        );
+        console.log("response", response);
+      }, 2000);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   return (
     <div className="main_how_work">
       <h1 className="work_content_h1">How it works?</h1>
+      
       <div className="work_contentt">
         <div className="container mt-5">
           <div className="row">
@@ -45,7 +76,9 @@ export default function How_it_work_two({Add_Follower,isFollow}) {
                     <button
                       className="connect_wallet_hw"
                       onClick={() =>
-                        chain?.id == chains[0]?.id
+                        !address
+                          ? open()
+                          : chain?.id == chains[0]?.id
                           ? open()
                           : switchNetwork?.(chains[0]?.id)
                       }
@@ -63,71 +96,116 @@ export default function How_it_work_two({Add_Follower,isFollow}) {
                 <div className="left_bor_content">
                   <h5>
                     ① {t("Follow")}{" "}
-                    <a
-                      className="text-decoration-underline text-white"
-                      target="_blank"
-                      href="https://twitter.com/GuildQB"
-                     onClick={()=>Add_Follower("twitter")}
-                    >
-                      {" "}
-                      {t("GuildQB's official")} {t("Twitter")}{" "}
-                    </a>
-                   
-                   
-                    {
-                      isFollow && isFollow?.twitter_Follow==true && <><img src={icon} alt="" className="mx-2" /></>
-                      
-                    }
-                    
+                    {user.success == true ? (
+                      <a
+                        className="text-decoration-underline text-white"
+                        target="_blank"
+                        href="https://twitter.com/GuildQB"
+                        onClick={() => Add_Follower("twitter")}
+                      >
+                        {" "}
+                        {t("GuildQB's official")} {t("Twitter")}{" "}
+                      </a>
+                    ) : (
+                      <a
+                        className="text-decoration-underline text-white"
+                        style={{
+                          cursor: user.success == false ? "no-drop" : "pointer",
+                        }}
+                      >
+                        {" "}
+                        {t("GuildQB's official")} {t("Twitter")}{" "}
+                      </a>
+                    )}
+                    {isFollow && isFollow?.twitter_Follow == true && (
+                      <>
+                        <img src={icon} alt="" className="mx-2" />
+                      </>
+                    )}
                   </h5>
                   <h5>
                     {t("② Retweet the")}{" "}
-                    <a
-                      className="text-decoration-underline text-white"
-                      target="_blank"
-                      href="https://twitter.com/guildqb/status/1680093793956270080?s=46&t=uvRkGhFIpkzzPVj8jAkdig"
-                     onClick={()=>Add_Follower("post")}
-                    >
-                      {" "}
-                      {t("designated post")}
-                    </a>
-                  
-                    {
-                    isFollow &&  isFollow?.Post_Follow==true && <><img src={icon} alt="" className="mx-2" /></>
-                    }
+                    {user.success == true ? (
+                      <a
+                        className="text-decoration-underline text-white"
+                        target="_blank"
+                        href="https://twitter.com/guildqb/status/1680093793956270080?s=46&t=uvRkGhFIpkzzPVj8jAkdig"
+                        onClick={() => Add_Follower("post")}
+                      >
+                        {" "}
+                        {t("designated post")}
+                      </a>
+                    ) : (
+                      <a
+                        className="text-decoration-underline text-white"
+                        style={{
+                          cursor: user.success == false ? "no-drop" : "pointer",
+                        }}
+                      >
+                        {" "}
+                        {t("designated post")}
+                      </a>
+                    )}
+                    {isFollow && isFollow?.Post_Follow == true && (
+                      <>
+                        <img src={icon} alt="" className="mx-2" />
+                      </>
+                    )}
                   </h5>
                   <h5>
                     ③ {t("Follow the")}{" "}
-                    <a
-                      className="text-decoration-underline text-white"
-                      target="_blank"
-                      href="https://discord.com/invite/BNjFBTgpMt"
-                     onClick={()=>Add_Follower("discord")}
-                    >
-                      {" "}
-                      {t("official GuildQB Discord")}{" "}
-                    </a>
-                    {
-                     isFollow && isFollow?.discord_Follow==true && <><img src={icon} alt="" className="mx-2" /></>
-                    }
+                    {user.success == true ? (
+                      <a
+                        className="text-decoration-underline text-white"
+                        target="_blank"
+                        href="https://discord.com/invite/BNjFBTgpMt"
+                        onClick={() => Add_Follower("discord")}
+                      >
+                        {" "}
+                        {t("official GuildQB Discord")}{" "}
+                      </a>
+                    ) : (
+                      <a
+                        className="text-decoration-underline text-white"
+                        style={{
+                          cursor: user.success == false ? "no-drop" : "pointer",
+                        }}
+                      >
+                        {" "}
+                        {t("official GuildQB Discord")}{" "}
+                      </a>
+                    )}
+                    {isFollow && isFollow?.discord_Follow == true && (
+                      <>
+                        <img src={icon} alt="" className="mx-2" />
+                      </>
+                    )}
                   </h5>
                   <div className="two_btn flex-column flex-md-row d-flex gap-4">
                     <a
-                      href="https://discord.com/invite/BNjFBTgpMt"
+                      href="https://betterlogic-audit.betterlogics.tech/Discord_login"
                       target="_blank"
-                     onClick={()=>Add_Follower("discord")}
+                      onClick={() => Add_Auth()}
                       className="text-decoration-none text-white"
                     >
-                      <button className="dis_btn">
-                        {" "}
+                      <button className="dis_btn"
+                      disabled={user.success == true ? true :false}
+                      style={{cursor:(user.success == true ? "no-drop":"pointer")}}
+                      >
+                        
+                  
                         <img src={discord} alt="" />{" "}
-                        <small className="ps-1">Username </small>
+                        <small className="ps-1">
+                          {user.success == true
+                            ? user?.data[0]?.UserName
+                            : "Connect"}{" "}
+                        </small>
                       </button>
                     </a>
-                    <a
+                    {/* <a
                       href="https://twitter.com/GuildQB"
                       target="_blank"
-                     onClick={()=>Add_Follower("twitter")}
+                      onClick={() => Add_Follower("twitter")}
                       className="text-decoration-none text-white"
                     >
                       <button className="dis_btn">
@@ -135,7 +213,7 @@ export default function How_it_work_two({Add_Follower,isFollow}) {
                         <img src={twi} alt="" />{" "}
                         <small className="ps-1">Username </small>
                       </button>
-                    </a>
+                    </a> */}
                   </div>
                 </div>
               </div>
@@ -158,8 +236,26 @@ export default function How_it_work_two({Add_Follower,isFollow}) {
                         className="text-decoration-none"
                         to="/Refferal_main"
                       >
-                  
-                        <button disabled={isFollow &&  isFollow?.discord_Follow==true && isFollow?.twitter_Follow==true && isFollow?.Post_Follow == true ? false:true }  style={{cursor:(isFollow &&  isFollow?.discord_Follow==true && isFollow?.twitter_Follow==true && isFollow?.Post_Follow == true ? "pointer":"no-drop")}} className="connect_wallet_hw">
+                        <button
+                          disabled={
+                            isFollow &&
+                            isFollow?.discord_Follow == true &&
+                            isFollow?.twitter_Follow == true &&
+                            isFollow?.Post_Follow == true
+                              ? false
+                              : true
+                          }
+                          style={{
+                            cursor:
+                              isFollow &&
+                              isFollow?.discord_Follow == true &&
+                              isFollow?.twitter_Follow == true &&
+                              isFollow?.Post_Follow == true
+                                ? "pointer"
+                                : "no-drop",
+                          }}
+                          className="connect_wallet_hw"
+                        >
                           {" "}
                           <img src={iconn} alt="" /> Share link
                         </button>

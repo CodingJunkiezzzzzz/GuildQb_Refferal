@@ -25,9 +25,7 @@ function Header({ handleButtonClick,handleChange,user_Points }, props) {
 
   const [langValue, setlangValue] = useState('');
 
-  console.log("HXN", langValue);
 
-console.log("setlangValue", setlangValue);
   const { open, close } = useWeb3Modal();
   const { address } = useAccount();
   const { chain } = useNetwork();
@@ -38,13 +36,16 @@ console.log("setlangValue", setlangValue);
   const Check_Follow = async () => {
     try {
       let res = await axios.post(
-        "https://betterlogic-audit.betterlogics.tech/get_Follower",
+        "https://betterlogic-audit.betterlogics.tech/get_Follower_All",
         {
           User_Address: address,
         }
       );
-      // console.log("Check_Follow",res.data);
-      setIsFollow(res?.data?.data[0]);
+      console.log("Check_Follow",res.data);
+      if(res.data.success==true){
+
+        setIsFollow(res?.data?.data[0]);
+      }
     } catch (error) {
       console.log(error);
     }
@@ -189,14 +190,19 @@ console.log("setlangValue", setlangValue);
                       className="walletConnect"
                       href="#"
                       onClick={() =>
-                        chain?.id == chains[0]?.id
-                          ? open()
-                          : switchNetwork?.(chains[0]?.id)
+                        (
+                          !address ? open() :
+                          chain?.id == chains[0]?.id
+                            ? open()
+                            : switchNetwork?.(chains[0]?.id)
+                        )
                       }
                       // className={collection == 0 ? "active" : "non_active"}
                     >
                       <FaWallet className="wallet" />
-                      {chain?.id == chains[0]?.id ? (
+                      {
+                        !address ?  "Connect wallet" : <>
+                         {chain?.id == chains[0]?.id ? (
                         address ? (
                           <>
                             {`${address.substring(0, 6)}...${address.substring(
@@ -209,6 +215,9 @@ console.log("setlangValue", setlangValue);
                       ) : (
                         "Switch NetWork"
                       )}
+                        </>
+                      }
+                     
                     </Nav.Link>
                   </>
                 )}

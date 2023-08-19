@@ -33,50 +33,20 @@ export default function Already_ref() {
               </h1>
 
               <div className="mt-5 ">
-              {chain?.id == chains[0]?.id ? (
-                  address ? (
-                    <>
-                      <button className="btn waletbtn poniter">
-                  {" "}
-                  <FaWallet className="me-2" />{" "}
-                  <span className="some">  {`${address.substring(0, 6)}...${address.substring(
-                              address.length - 4
-                            )}`}</span>
-                </button>
-                    </>
-                  ) : (
-                    <>
-                    <button className="btn waletbtn poniter" onClick={() =>
-                        chain?.id == chains[0]?.id
-                          ? open()
-                          : switchNetwork?.(chains[0]?.id)
-                      }>
-                  {" "}
-                  <FaWallet className="me-2" />{" "}
-                  <span className="some"> Connect wallet</span>
-                </button>
-                    {/* <div className="d-flex justify-content-center">
-                    <button className="reward_but" onClick={() =>
-                        chain?.id == chains[0]?.id
-                          ? open()
-                          : switchNetwork?.(chains[0]?.id)
+               
+                    <div className="d-flex justify-content-center">
+                    <button className="reward_but"  onClick={() =>
+                        (
+                          !address ? open() :
+                          chain?.id == chains[0]?.id
+                            ? open()
+                            : switchNetwork?.(chains[0]?.id)
+                        )
                       }>
                       <FaWallet className="walletReward me-2" />
-                      Connect wallet
-                    </button>
-                  </div> */}
-                    </>
-                  )
-                ) : (
-                  <>
-                  <div className="d-flex justify-content-center">
-                    <button className="reward_but" onClick={() =>
-                        chain?.id == chains[0]?.id
-                          ? open()
-                          : switchNetwork?.(chains[0]?.id)
-                      }>
-                      <FaWallet className="walletReward me-2" />
-                      {chain?.id == chains[0]?.id ? (
+                      {
+                        !address ?  "Connect wallet" : <>
+                         {chain?.id == chains[0]?.id ? (
                         address ? (
                           <>
                             {`${address.substring(0, 6)}...${address.substring(
@@ -84,26 +54,16 @@ export default function Already_ref() {
                             )}`}{" "}
                           </>
                         ) : (
-                          <>
-                          <button className="btn waletbtn poniter" onClick={() =>
-                        chain?.id == chains[0]?.id
-                          ? open()
-                          : switchNetwork?.(chains[0]?.id)
-                      }>
-                  {" "}
-                  <FaWallet className="me-2" />{" "}
-                  <span className="some"> Connect wallet</span>
-                </button>
-                          </>
+                          "Connect wallet"
                         )
                       ) : (
                         "Switch NetWork"
                       )}
+                        </>
+                      }
                     </button>
-                  </div>
-                  </>
-                )}
-                
+                    </div>
+               
               </div>
 
               <img src={Mask} className="position-absolute mask" alt="" />
